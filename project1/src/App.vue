@@ -33,12 +33,9 @@ export default {
 }
 
 #app-content {
-  
 }
 
 body{
-  /*direction: rtl;*/
-  direction: ltr;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -60,6 +57,10 @@ body{
   border-radius: 7px;
   display: inline-flex;
   float: right;
+}
+
+body.rtl .rating{
+  float: left;
 }
 
 .rating .star-fill{
@@ -109,6 +110,7 @@ body{
 .row {
     margin-right: -15px;
     margin-left: -15px;
+    display: flex;
 }
 
 * {
@@ -203,9 +205,7 @@ body{
   .col-md-1 {
     width: 8.33333333%;
   }
-  
 }
-
 .text-left {
   text-align: left;
 }
@@ -655,7 +655,7 @@ textarea.form-control {
     color: #fff;
     background-color: #5cb85c;
     border-color: #4cae4c;
-}
+  }
 
 .btn-default {
     color: #333;

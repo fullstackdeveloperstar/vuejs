@@ -6,7 +6,7 @@
         <div>SnapTravel</div>
       </div>
 
-      <div class="detail-div text-right">
+      <div class="detail-div">
         Rate Expires In 29:28
       </div>
     </div>
@@ -60,17 +60,17 @@
           
           <div class="row check-div">
             <div class="col-xs-8">Wednesday February21, 2018</div>
-            <div class="col-xs-4 text-right">Chck-in</div>
+            <div class="col-xs-4 text-right dir-option">Check-in</div>
           </div>
 
           <div class="row check-div">
             <div class="col-xs-8">Thursday February 22, 2018</div>
-            <div class="col-xs-4 text-right">Check-out</div>
+            <div class="col-xs-4 text-right dir-option">Check-out</div>
           </div>
 
           <div class="row check-div">
             <div class="col-xs-8 ">1 night, 1 room, 2 adults</div>
-            <div class="col-xs-4 text-right">For</div>
+            <div class="col-xs-4 text-right dir-option">For</div>
           </div>
 
           <div class="hr"></div>
@@ -80,17 +80,17 @@
 
           <div class="row check-div">
             <div class="col-xs-6">Room Subtotal:</div>
-            <div class="col-xs-6 text-right text-danger" ><del>USD95.57</del></div>
+            <div class="col-xs-6 text-right text-danger dir-option"><del>USD95.57</del></div>
           </div>
 
           <div class="row check-div">
             <div class="col-xs-6"></div>
-            <div class="col-xs-6 text-right text-success">USD79.64</div>
+            <div class="col-xs-6 text-right text-success dir-option">USD79.64</div>
           </div>
 
           <div class="row check-div">
             <div class="col-xs-6"><u>Taxes:</u></div>
-            <div class="col-xs-6 text-right">USD10.36</div>
+            <div class="col-xs-6 text-right dir-option">USD10.36</div>
           </div>
 
           <div class="hr"></div>
@@ -99,7 +99,7 @@
 
           <div class="row check-div">
             <div class="col-xs-6"><b>Total Price:</b></div>
-            <div class="col-xs-6 text-right"><b>USD90.00</b></div>
+            <div class="col-xs-6 text-right dir-option"><b>USD90.00</b></div>
           </div>
 
           <div class="text-danger check-div">
@@ -107,7 +107,7 @@
           </div>
 
           <div class="check-div">
-            <h4>Referral Code</h4>
+            <p class="dir-option"><b>Referral Code</b></p>
 
             <div class="flex">
               <input class="form-control"> 
@@ -117,7 +117,7 @@
 
           <div class="row check-div">
             <div class="col-xs-6">Refund Policy</div>
-            <div class="col-xs-6 text-right"><u>Non Refundable</u></div>
+            <div class="col-xs-6 text-right dir-option"><u>Non Refundable</u></div>
           </div>
 
           <div class="check-div row text-center">
@@ -125,7 +125,7 @@
           </div>
 
            <div class="margintop20 text-center">
-            <b>Book with Confidence!</b>
+            <b>Book with Confidence !</b>
            </div>
 
            <div class="row margintop20">
@@ -770,6 +770,11 @@ export default {
   margin-right: 5px;
   line-height: 50px;
   font-weight: 700;
+  text-align: right;
+}
+
+body.rtl .header .detail-div{
+  text-align: left;
 }
 
 .booking-content{
@@ -854,6 +859,10 @@ color: darkgrey;
 
 .btn-success{
   width: 50%;
+  margin: auto;
 }
 
+body.rtl .dir-option{
+  text-align: left;
+}
 </style>

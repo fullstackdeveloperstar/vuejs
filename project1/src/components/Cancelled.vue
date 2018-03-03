@@ -17,7 +17,6 @@
 	      	<div class="col-xs-10">
 	      		<p>Your booking was cancelled.</p>
 	      		<p>Confirmation number: 3124256</p>
-	      		
 	      	</div>
 	      </div>
 
@@ -58,17 +57,17 @@
 
           <div class="row margintop10">
             <div class="col-xs-8">Wednesday February21, 2018</div>
-            <div class="col-xs-4 text-right">Chck-in</div>
+            <div class="col-xs-4 text-right dir-option">Check-in</div>
           </div>
 
           <div class="row margintop10">
             <div class="col-xs-8">Thursday February 22, 2018</div>
-            <div class="col-xs-4 text-right">Check-out</div>
+            <div class="col-xs-4 text-right dir-option">Check-out</div>
           </div>
 
           <div class="row margintop10">
             <div class="col-xs-8">1 night, 1 room, 2 adults</div>
-            <div class="col-xs-4 text-right">For</div>
+            <div class="col-xs-4 text-right dir-option">For</div>
           </div>
 
           <div class="hr"></div>
@@ -78,28 +77,28 @@
 
           <div class='row margintop10'>
             <div class="col-xs-6">Room Subtotal:</div>
-            <div class="col-xs-6 text-right text-danger"><del>USD95.57</del></div>
+            <div class="col-xs-6 text-right text-danger dir-option"><del>USD95.57</del></div>
           </div>
 
           <div class="row margintop10">
             <div class="col-xs-6"></div>
-            <div class="col-xs-6 text-right text-success">USD79.64</div>
+            <div class="col-xs-6 text-right text-success dir-option">USD79.64</div>
           </div>
 
           <div class="row margintop10">
             <div class="col-xs-6"><u>Taxes:</u></div>
-            <div class="col-xs-6 text-right" >USD10.36</div>
+            <div class="col-xs-6 text-right dir-option" >USD10.36</div>
           </div>
           
           <hr>
 
           <div class="row margintop10">
             <div class="col-xs-6"><b>Total Price:</b></div>
-            <div class="col-xs-6 text-right"><b>USD90.00</b></div>
+            <div class="col-xs-6 text-right dir-option"><b>USD90.00</b></div>
           </div>
 
           <div class="margintop10 text-danger">
-            <i>Note: Total Price exculdes resort fees directly collected by the hotel at checkin. <u data-toggle="modal" data-target="#more-info-modal">More info</u></i>
+            <i><i>Note:</i> Total Price exculdes resort fees directly collected by the hotel at checkin. <u data-toggle="modal" data-target="#more-info-modal">More info</u></i>
           </div>
 
           
@@ -149,6 +148,10 @@ export default {
 .hotel-image{
   width: 50%;
   border-radius: 5px;
+}
+
+body.rtl .dir-option{
+  text-align: left;
 }
 
 </style>
