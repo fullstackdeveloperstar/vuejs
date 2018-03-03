@@ -134,7 +134,7 @@
                                     <h4 class="dir-option-left-me">הוסף ביטוח נסיעות לחו"ל החל מ- $1.50<br /> (מחיר לתכנית הבסיסית ללא כיסוי צד ג' ואיתור וחילוץ) <a href="#" target="_blank">תמצית הכיסויים</a></h4>
                                     <div class="form-row">
                                         <div class="form-controls form-controls-select">
-                                            <select class="select select-popup-toggle select-insurance input-field dir-option-left-me">
+                                            5<select class="select select-popup-toggle select-insurance input-field dir-option-left-me">
                                                 <option value="">
                                                     בחר סוג הפוליסה
                                                 </option>
@@ -566,6 +566,7 @@ body.ltr .form-checkout .form-controls-icon + .field,
 .form-checkout .form-controls-icon + .textarea { padding-right: 0; padding-left: 35px; text-align:left; }
 
 .form-checkout .form-controls-select .select { padding-left: 32px; }
+body.ltr .form-checkout .form-controls-select .select { padding-left: 0px; }
 .form-checkout .form-controls-select .select:disabled{ background: #eee;}
 .form-checkout .form-cols { margin: 0 -7px; }
 .form-checkout .form-section { padding-bottom: 21px; }
