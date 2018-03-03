@@ -197,11 +197,17 @@ Our agents will also call the hotel to negotiate a free upgrade(subject to avail
           </div>
 
           <div class="row text-center check-div">
-            <b>Congratulations!</b>
+            <div class="col-xs-12">
+            <b>Congratulations!</b>  
+            </div>
+            
+
           </div>
 
           <div class="row text-center">
+            <div class="col-xs-12">
             You got our best rate! Prices may change anytime so <b>Book Now</b> to avoid disappointment.
+            </div>
           </div>
 
         </div>
