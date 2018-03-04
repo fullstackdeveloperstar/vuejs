@@ -67,28 +67,28 @@
 		display: flex;
 	}
 
-	.orderitem-div{
+	.orderItem .orderitem-div{
 		padding: 5px;
 	}
 
-	.location{
+	.orderItem .location{
 		padding: 15px;
 	}
 
-	.title{
+	.orderItem .title{
 		margin: 0;
 	}
 
-	.status{
+	.orderItem .status{
 		padding: 15px;
 	}
 
-	.hotel-image{
+	.orderItem .hotel-image{
 		width: 100%;
 		border-radius: 5px;
 	}
 
-	.godetail{
+	.orderItem .godetail{
 		background: #ddd;
 	}
 </style>

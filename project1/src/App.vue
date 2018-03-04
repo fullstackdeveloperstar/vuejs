@@ -135,7 +135,7 @@ body.rtl .booking-app .rating{
 .booking-app a.text-warning:focus {
   color: #66512c;
 }
-.text-danger {
+.booking-app .text-danger {
   color: #a94442;
 }
 .booking-app a.text-danger:hover,
