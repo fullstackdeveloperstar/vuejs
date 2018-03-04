@@ -1,5 +1,5 @@
 <template>
-	<div class="booking">
+	<div class="booking-success">
 	    <div class="header">
 	      <div class="log-div">
 	        <img src="../assets/logo300.png" class="logo300">
@@ -104,7 +104,7 @@
 
           <div class="row margintop20">
             <div class="col-xs-6">Refund Policy</div>
-            <div class="col-xs-6 text-right"><u @click="showModal=true">Non Refundable</u></div>
+            <div class="col-xs-6 text-right dir-option"><u @click="showModal=true">Non Refundable</u></div>
           </div>
 	    </div>
 
@@ -168,27 +168,72 @@ export default {
 
 <style scoped>
 
-.booking{
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
+  .booking-success{
+    
+  }
 
-.booking-content{
-	padding: 20px;
-}
+  .booking-success .header{
+      height: 50px;
+      width: 100%;
+      background: #f49244;
+      display: inline-flex;
+      color: white;
+    }
 
-.success-icon{
-  width: 50px;
-}
+  .booking-success .header .log-div{
+    padding-left: 5%;
+    display: inline-flex;
+    line-height: 50px;
+    font-weight: 700;
+  }
 
-.hotel-image{
-  width: 50%;
-  border-radius: 5px;
-}
-body.rtl .dir-option{
-  text-align: left;
-}
+  .booking-success .header .log-div .logo300{
+    width: 50px;
+    height: 50px;
+  }
+
+  body.rtl .booking .header .detail-div{
+    text-align: left;
+  }
+
+  .booking-success .booking-content{
+  	padding: 20px;
+  }
+
+  .booking-success .success-icon{
+    width: 50px;
+  }
+
+  .booking-success .hotel-image{
+    width: 50%;
+    border-radius: 5px;
+  }
+  body.rtl .booking-success .dir-option{
+    text-align: left;
+  }
+
+  .booking-success .table {
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: 1rem;
+      background-color: transparent;
+  }
+
+  .booking-success table {
+      border-collapse: collapse;
+  }
+
+  .booking-success .table thead th {
+      vertical-align: bottom;
+      border-bottom: 2px solid #dee2e6;
+  }
+
+  .booking-success .table td, .table th {
+      padding: .75rem;
+      vertical-align: top;
+      
+  }
+  .booking-success th {
+      text-align: inherit;
+  }
 </style>

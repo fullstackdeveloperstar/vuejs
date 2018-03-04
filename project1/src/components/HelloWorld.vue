@@ -1,5 +1,5 @@
 <template>
-  <div class="HelloPage">
+  <div class="hellopage">
     <p>"Two things are infinite:</p>
     <p>The universe & SnapTravel deals.</p>
     <p>-Albert Einstein</p>
@@ -30,17 +30,14 @@ export default {
 
 
 <style scoped>
-.HelloPage{
+.hellopage{
+  margin-top: 30%;
   text-align: center;  
 }
 
-.logo-round{
+.hellopage .logo-round{
   width: 50px;
   margin-top: 50px;
-}
-
-p{
-  font-size: 12px;
 }
 
 </style>

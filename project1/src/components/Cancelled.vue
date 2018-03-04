@@ -1,5 +1,5 @@
 <template>
-	<div class="booking">
+	<div class="cancelled">
 	    <div class="header">
 	      <div class="log-div">
 	        <img src="../assets/logo300.png" class="logo300">
@@ -129,28 +129,42 @@ export default {
 
 <style scoped>
 
-.booking{
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
+  .cancelled .header{
+      height: 50px;
+      width: 100%;
+      background: #f49244;
+      display: inline-flex;
+      color: white;
+    }
 
-.booking-content{
+  .cancelled .header .log-div{
+    padding-left: 5%;
+    display: inline-flex;
+    line-height: 50px;
+    font-weight: 700;
+  }
+
+  .cancelled .header .log-div .logo300{
+    width: 50px;
+    height: 50px;
+  }
+
+
+
+.cancelled .cancelled-content{
 	padding: 20px;
 }
 
-.warning-icon{
+.cancelled .warning-icon{
 	width: 50px;
 }
 
-.hotel-image{
+.cancelled .hotel-image{
   width: 50%;
   border-radius: 5px;
 }
 
-body.rtl .dir-option{
+body.rtl .cancelled .dir-option{
   text-align: left;
 }
 

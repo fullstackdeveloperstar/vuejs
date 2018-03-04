@@ -227,12 +227,12 @@ Our agents will also call the hotel to negotiate a free upgrade(subject to avail
           
           <div class='row'>
             <div class="col-xs-6"><b>Total Charged:</b></div>
-            <div class="col-xs-6 text-right"><b>USD90.00</b></div>
+            <div class="col-xs-6 text-right dir-option"><b>USD90.00</b></div>
           </div>
 
           <div class='row margintop20'>
             <div class="col-xs-6"><b>Credit Card Number</b></div>
-            <div class="col-xs-6 text-right">
+            <div class="col-xs-6 text-right dir-option">
               <img src="../assets/card.jpg" class="creditcard">
             </div>
           </div>
@@ -646,7 +646,7 @@ Our agents will also call the hotel to negotiate a free upgrade(subject to avail
           <div class="row">
             <div class='col-md-12 secure-note'>
               <img src="../assets/lock.png" class="lock-icon">
-              <div>We use secure and encrypted transmission to protect your personal information</div>
+              <div class="lock-text">We use secure and encrypted transmission to protect your personal information</div>
             </div>
           </div>
 
@@ -719,14 +719,10 @@ export default {
 <style scoped>
 
 .booking{
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+ 
 }
 
-.booking-process{
+.booking .booking-process{
   width: 100%;
   height: 100%;
   position: fixed;
@@ -737,7 +733,7 @@ export default {
   justify-content: center;
 }
 
-.booking-process-bg{
+.booking .booking-process-bg{
   width: 100%;
   height: 100%;
   position: absolute;
@@ -747,11 +743,11 @@ export default {
   background: #fff;
 }
 
-.booking-process-content{
+.booking .booking-process-content{
   z-index: 1;
 }
 
-.header{
+.booking .header{
     height: 50px;
     width: 100%;
     background: #f49244;
@@ -759,19 +755,19 @@ export default {
     color: white;
   }
 
-.header .log-div{
+.booking .header .log-div{
   padding-left: 5%;
   display: inline-flex;
   line-height: 50px;
   font-weight: 700;
 }
 
-.header .log-div .logo300{
+.booking .header .log-div .logo300{
   width: 50px;
   height: 50px;
 }
 
-.header .detail-div{
+.booking .header .detail-div{
   width: 100%;
   margin-right: 5px;
   line-height: 50px;
@@ -779,91 +775,95 @@ export default {
   text-align: right;
 }
 
-body.rtl .header .detail-div{
+body.rtl .booking .header .detail-div{
   text-align: left;
 }
 
-.booking-content{
+.booking .booking-content{
   padding: 5px;
 
 }
 
-.booking-detail-panel{
+.booking .booking-detail-panel{
   padding: 5px;
 }
 
-.booking-detail-panel .booking-detail-panel-header {
+.booking .booking-detail-panel .booking-detail-panel-header {
   padding: 5px;
   height: 50px;
   line-height: 50px;
   border-bottom: solid 1px #ddd;
 }
 
-.booking-detail-panel .booking-detail-panel-body{
+.booking .booking-detail-panel .booking-detail-panel-body{
   padding: 20px 10px;
 }
 
-.hotel-panel-header{
+.booking .hotel-panel-header{
   line-height: 40px;
 }
 
-.hotel-title{
+.booking .hotel-title{
   font-size: 12px;
 }
 
-.hotel-image{
+.booking .hotel-image{
   margin-top: 20px;
 }
 
-.hotel-image img{
+.booking .hotel-image img{
   width: 50%;
   border-radius: 5px;
 }
 
-.room-info{
+.booking .room-info{
  margin-top: 15px;
 }
 
-.mute{
-color: darkgrey;
-}
-
-.check-div{
+.booking .check-div{
   margin-top: 10px;
 }
 
-.apply-text{
+.booking .apply-text{
   width: 30%;
   text-align: center;
   line-height: 30px;
   color:rgb(47,121,187);
 }
 
-.lock-icon{
+.booking .creditcard{
+  height: 20px;
+}
+
+.booking .cvv-icon{
+  font-size:12px; 
+  color: #ddd;
+}
+
+.booking .secure-note{
+  padding: 20px;
+}
+
+.booking .secure-note .lock-icon{
   width:20px;
   height: 25px; 
   float: left;
   margin-right:5px;
 }
 
-.creditcard{
-  height: 20px;
+body.rtl .booking .secure-note .lock-icon{ 
+  float: right;
 }
 
-.cvv-icon{
-  font-size:12px; 
-  color: #ddd;
+.booking .secure-note .lock-text{
+  padding: 0 28px;
 }
 
-.secure-note{
-  padding: 20px;
-}
-
-.secure-icon{
+.booking .secure-icon{
   width: 80%;
 }
 
-.btn-success{
+.booking .btn-success{
   width: 50%;
   margin: auto;
 }
@@ -871,4 +871,29 @@ color: darkgrey;
 body.rtl .dir-option{
   text-align: left;
 }
+
+.table {
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: 1rem;
+      background-color: transparent;
+  }
+
+  table {
+      border-collapse: collapse;
+  }
+
+  .table thead th {
+      vertical-align: bottom;
+      border-bottom: 2px solid #dee2e6;
+  }
+
+  .table td, .table th {
+      padding: .75rem;
+      vertical-align: top;
+      
+  }
+  th {
+      text-align: inherit;
+  }
 </style>

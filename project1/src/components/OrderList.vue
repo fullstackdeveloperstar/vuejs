@@ -2,19 +2,15 @@
 	<div class="orderList">
 		<div class="orderlist-header">
 	      <div class="row">
-	      	<div  class="col-xs-3 col-md-2">
-	      		<img src="../assets/logo300.png" class="logo-icon">
-	      	</div>
-	        
-	        <div class="col-xs-6 col-md-8">
+	      	
+	      	<img src="../assets/logo300.png" class="logo-icon">
+	      	
+	        <div >
 	        	<p class="text-muted resevation1">Reservations For:</p>
 	        	<p class="text-muted resevation2">Ika Key</p>
 	        	
 	        </div>
-	        <div class="col-xs-3 col-md-2">
-	        	<span>
-	        	<img src="../assets/search.png" class="search-icon"></span>
-	        </div>
+	        	<img src="../assets/search.png" class="search-icon">
 	      </div>
 
 	    </div>
@@ -64,41 +60,50 @@
   background: #f5f5f5;
 }
 
-.orderlist-header{
+.orderList .orderlist-header{
 	background: white;
 	box-shadow: 0px 5px 15px -1px #aaa;
     border: solid 1px #ddd;
     border-left: 0;
     border-right: 0;
+    margin: 0;
 }
 
-.orderlist-content{
+.orderList .orderlist-content{
 	padding: 20px;
 }
 
-.header .log-div{
+.orderList .header .log-div{
 	padding-left: 0;
 }
 
-.resevation1{
+.orderList .resevation1{
 	line-height: 30px; 
 	margin: 0;
 	font-size: 12px;
 }
 
-.resevation2{
+.orderList .resevation2{
 	line-height: 15px; 
 	margin: 0;
 }
 
-.logo-icon{
-	width: 100%;
+.orderList .logo-icon{
+	width: 50px;
+	height: 50px;
 }
 
-.search-icon{
-	width: 100%; 
-	padding: 15%;
+.orderList .search-icon{
+	width: 50px; 
+	height: 50px;
 	border: solid 1px #ddd;
+	position: absolute;
+	right: 0;
+}
+
+body.rtl .orderList .search-icon{
+	left: 0;
+	right: auto;
 }
 
 </style>
