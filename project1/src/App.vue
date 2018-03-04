@@ -185,7 +185,7 @@ body.rtl .booking-app .rating{
        url('glyphicons-halflings-regular.ttf') format('truetype'),
        url('glyphicons-halflings-regular.svg#@{icon-font-svg-id}') format('svg');
 }
-.glyphicon {
+.booking-app .glyphicon {
   position: relative;
   top: 1px;
   display: inline-block;
@@ -197,9 +197,9 @@ body.rtl .booking-app .rating{
   -moz-osx-font-smoothing: grayscale;
 }
 
-.glyphicon-map-marker:before { content: "\e062"; }
-.glyphicon-info-sign:before { content: "\e086"; }
-.glyphicon-menu-right:before { content: "\e258"; } 
+.booking-app .glyphicon-map-marker:before { content: "\e062"; }
+.booking-app .glyphicon-info-sign:before { content: "\e086"; }
+.booking-app .glyphicon-menu-right:before { content: "\e258"; } 
 
 .booking-app .well {
     min-height: 20px;
@@ -212,7 +212,7 @@ body.rtl .booking-app .rating{
     box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
 }
 
-.btn {
+.booking-app .btn {
     display: inline-block;
     padding: 6px 12px;
     margin-bottom: 0;
@@ -234,34 +234,34 @@ body.rtl .booking-app .rating{
     border-radius: 4px;
   }
 
-  .btn-success {
+  .booking-app .btn-success {
     color: #fff;
     background-color: #5cb85c;
     border-color: #4cae4c;
   }
 
-  .btn-default {
+  .booking-app .btn-default {
       color: #333;
       background-color: #fff;
       border-color: #ccc;
   }
 
-.margintop20{
-  margin-top: 20px;
-}
+  .booking-app .margintop20{
+    margin-top: 20px;
+  }
 
-hr .hr{
- border:0; 
- border-bottom: solid 0.5px gray;
- margin-top: 20px;
- margin-bottom: 20px;
-}
+ .booking-app hr .hr{
+   border:0; 
+   border-bottom: solid 0.5px gray;
+   margin-top: 20px;
+   margin-bottom: 20px;
+  }
 
-.margintop10{
+.booking-app .margintop10{
   margin-top: 10px;
 }
 
-.margintop20{
+.booking-app .margintop20{
   margin-top: 20px;
 }
 </style>
