@@ -24,6 +24,7 @@
 	    background-color: #fff;
 	    display: block;
 	    opacity: 0.9;
+		top:0;
 	}
 
 	.header .header-container {
@@ -38,7 +39,7 @@
 	    margin-left: 29px;
 	}
 
-	.logo {
+	.header .logo {
 	    width: 96px;
 	    height: 20px;
 	    background-image: url(../assets/logo.png);
@@ -53,7 +54,7 @@
 	    transform-origin: center right;
 	}
 
-	.logo {
+	.header .logo {
 	    display: inline-block;
 	    vertical-align: middle;
 	    background-repeat: no-repeat;

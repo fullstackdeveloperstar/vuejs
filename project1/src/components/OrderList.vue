@@ -2,17 +2,17 @@
 	<div class="orderList">
 		<div class="orderlist-header">
 	      <div class="row">
-	      	
-	      	<img src="../assets/logo300.png" class="logo-icon">
-	      	
-	        <div >
-	        	<p class="text-muted resevation1">Reservations For:</p>
-	        	<p class="text-muted resevation2">Ika Key</p>
-	        	
-	        </div>
-	        	<img src="../assets/search.png" class="search-icon">
-	      </div>
-
+			  <div class="col-xs">
+			  	<img src="../assets/logo300.png" class="logo-icon">
+			  </div>
+	        	<div class="search-title">
+	        		<p class="text-muted resevation1">Reservations For:</p>
+	        		<p class="text-muted resevation2">Ika Key</p>	
+	        	</div>
+	        	<div class="col-xs">
+					<img src="../assets/search.png" class="search-icon">
+	        	</div>
+	      	</div>
 	    </div>
 	    <div class="orderlist-content">
 	      	<div class="row">
@@ -20,9 +20,8 @@
 	      			<label class="text-muted">Upcoming</label>
 	      		</div>
 	      	</div>
-
 	      	<OrderItem  v-for="order in orders" :order="order"></OrderItem>
-	     </div>
+	    </div>
 	</div>
 </template>
 
@@ -51,59 +50,23 @@
 
 <style scoped>
 
-.orderList{
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: #f5f5f5;
-}
+.orderList{width: 100%; height: 100%; position: absolute; top: 0; left: 0; background: #f5f5f5;}
 
-.orderList .orderlist-header{
-	background: white;
-	box-shadow: 0px 5px 15px -1px #aaa;
-    border: solid 1px #ddd;
-    border-left: 0;
-    border-right: 0;
-    margin: 0;
-}
+.orderList .orderlist-header{background: white;box-shadow: 0px 5px 15px -1px #aaa; border: solid 1px #ddd; border-left: 0; border-right: 0; margin: 0;}
 
-.orderList .orderlist-content{
-	padding: 20px;
-}
+.orderList .orderlist-header .search-title{flex-grow: 2; padding: 0 10px;}
 
-.orderList .header .log-div{
-	padding-left: 0;
-}
+.orderList .orderlist-content{padding: 20px;}
 
-.orderList .resevation1{
-	line-height: 30px; 
-	margin: 0;
-	font-size: 12px;
-}
+.orderList .header .log-div{padding-left: 0;}
 
-.orderList .resevation2{
-	line-height: 15px; 
-	margin: 0;
-}
+.orderList .resevation1{line-height: 30px; margin: 0;font-size: 12px;}
 
-.orderList .logo-icon{
-	width: 50px;
-	height: 50px;
-}
+.orderList .resevation2{line-height: 15px; margin: 0;}
 
-.orderList .search-icon{
-	width: 50px; 
-	height: 50px;
-	border: solid 1px #ddd;
-	position: absolute;
-	right: 0;
-}
+.orderList .logo-icon{width: 50px;height: 100%; flex-grow: 1}
 
-body.rtl .orderList .search-icon{
-	left: 0;
-	right: auto;
-}
+.orderList .search-icon{width: 50px; height: 100%;	border: solid 1px #ddd; flex-grow: 3;}
 
+.orderList .row{justify-content: space-between;}
 </style>

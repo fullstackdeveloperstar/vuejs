@@ -58,18 +58,18 @@
 				</div>
 				
 				<div class="row margin-t-10">
-					<div class="col-xs-3">
+					<div class="col-xs-3 text-center">
 						<p class="text-muted">adsfa</p>
 						<h4>10:30</h4>
 					</div>
 
 					<div class="col-xs-4 text-small">
-						<p class="text-muted">adfaasdfasdfa</p>
+						<p class="text-muted text-center">asdfa</p>
 						<hr>
-						<small>AMS</small><small class="text-muted">ada</small><small>TLV</small>
+						<p class="text-center"><small>AMS</small><small class="text-muted">ada</small><small>TLV</small></p>
 					</div>
 
-					<div class="col-xs-3">
+					<div class="col-xs-3 text-center">
 						<p class="text-muted">adsfa</p>
 						<h4>10:30</h4>
 					</div>
@@ -80,15 +80,15 @@
 				</div>
 
 				<div class="row margin-t-10">
-					<div class="col-xs-3">
+					<div class="col-xs-3 text-center">
 						<p class="text-muted">adsfa</p>
 						<h4>10:30</h4>
 					</div>
 
 					<div class="col-xs-4 text-small">
-						<p class="text-muted">adfaasdfasdfa</p>
+						<p class="text-muted text-center">asdfa</p>
 						<hr>
-						<small>AMS</small><small class="text-muted">ada</small><small>TLV</small>
+						<p class="text-center"><small>AMS</small><small class="text-muted">ada</small><small>TLV</small></p>
 					</div>
 
 					<div class="col-xs-3">
@@ -108,7 +108,7 @@
 				</div>
 			</div>
 
-			<div class="action-item">
+			<div class="action-item standard-panel">
 				<div class="row">
 					<div class="col-xs-12 text-center">
 						<h3>Standard</h3>
@@ -258,14 +258,14 @@
 </script>
 
 <style scoped>
-	.image-view{
+	.viewdetail .image-view{
 		height: 300px;
 		position: relative;
 		margin: 0;
 		padding: 2px;
 	}
 
-	.image-view .image-count{
+	.viewdetail .image-view .image-count{
 		position: absolute;
 		top: 20px;
 		left: 30px;
@@ -278,11 +278,11 @@
 
 	}
 
-	.hotel-img{
+	.viewdetail .hotel-img{
 		width: 100%;
 	}
 
-	.image-gradient{
+	.viewdetail .image-gradient{
 		background: linear-gradient(#eee,white, #151514);
 		position: absolute;
 		top: 0;
@@ -292,58 +292,64 @@
 		opacity: 0.5;
 	}
 
-	.detail-view{
+	.viewdetail .detail-view{
 		padding: 5px;
 	}
 
-	.detail-view .row{
+	.viewdetail .detail-view .row{
 		margin-left: 0;
 		margin-right: 0;
 	}
 
-	.icon{
+	.viewdetail .icon{
 		width: 15px;
 	}
 
-	.detail-action{
+	.viewdetail .detail-action{
 		background: rgb(228, 235, 242);
 		padding: 10px 30px 30px 30px;
 	}
 
-	.action-item{
+	.viewdetail .action-item{
 		margin-top: 20px;
 		border:solid 1px rgb(53, 143, 36);
 		background: white;
 		padding: 10px 5px;
 	}
 
-	.action-item .btn{
+	.viewdetail .action-item .btn{
 		width: 100%;
 	}
 
-	hr{
+	.viewdetail hr{
 		border: solid 1px;
 	}
 
-	.detail-dropdowns{
+	.viewdetail .detail-dropdowns{
 		padding: 10px 20px;
 	}
 
-	li::after {
+	.viewdetail li::after {
 	    content: "•";
 	    display: inline-block;
 	    right: 0;
 	}
 
-	li{
+	.viewdetail li{
 		list-style: none;
 	}
 
-	select, select option{
+	.viewdetail select, .viewdetail select option{
 		direction: rtl;
 	}
 
-	body.rtl select, select option{
+	body.rtl .viewdetail select, body.rtl .viewdetail select option{
 		direction: ltr;
 	}
+
+	.viewdetail .standard-panel p{margin: 0}
+
+	.viewdetail .detail-action p {margin: 0;}
+
+	.viewdetail .margin-t-20{margin-top: 20px;}
 </style>

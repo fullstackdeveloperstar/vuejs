@@ -21,23 +21,16 @@ export default {
   },
 
   methods: {
-    gotoSnapTravel() {
-      this.$router.push({ path:'snaptravel' });
+    gotoSnapTravel () {
+      this.$router.push({ path: 'snaptravel' })
     }
   }
 }
 </script>
 
-
 <style scoped>
-.hellopage{
-  margin-top: 30%;
-  text-align: center;  
-}
+.hellopage{ margin-top: 30%; text-align: center;}
 
-.hellopage .logo-round{
-  width: 50px;
-  margin-top: 50px;
-}
+.hellopage .logo-round{ width: 50px; margin-top: 50px;}
 
 </style>

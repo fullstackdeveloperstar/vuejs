@@ -5,33 +5,12 @@
       <p class="dates dir-option-left">Thursday 15/03 - Friday 30/03 (15 nights)</p>
       <span class="ribbon">Number of results:<strong id="number_of_results">87</strong>
       </span>
-      <div class="section-head-inner">
-        <nav class="nav-tertiary">
-          <ul>
-            <li>
-                <a href="#modalFilters" class="js-modal-toggle" data-type="filters">
-                    <i class="icon-filter"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
-                    filtering
-                </font></font></a>
-            </li>
-                                        <li>
-                <a href="#modalSort" class="js-modal-toggle" data-type="sort">
-                    <i class="icon-sort"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
-                    sort
-                </font></font></a>
-            </li>
-                                        <li class="alignleft">
-                <a href="#modalSearch" class="js-modal-toggle" data-type="search">
-                    <i class="icon-search"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
-                    Change Search
-                </font></font></a>
-            </li>
+    </div>
 
-
-
-          </ul>
-        </nav><!-- /.nav-tertiary -->
-      </div>
+    <div class="section-head-inner row">
+        <div class="col-xs-4">filtering</div>   
+        <div class="col-xs-4">sorting</div>
+        <div class="col-xs-4">checking</div>
     </div>
 
     <div class="hotels">
@@ -63,7 +42,7 @@ export default {
 <style scoped>
   .section-results .section-head {
     position: relative;
-    padding: 10px;
+    padding: 15px 10px;
     color: #fff;
     /* color: #c6e1c8; */
     /* background: #198624 url(../img/results-head.png) no-repeat 0 -26px; */
@@ -82,7 +61,8 @@ export default {
   }
 
   .section-results .section-head p {
-    padding-bottom: 15px;
+    padding-bottom: 0px;
+    margin: 0px;
     color: #88c6d8;
     text-align: right;
     font-size: 12px;
@@ -92,9 +72,10 @@ export default {
     position: absolute;
     bottom: -4px;
     left: 10px;
+    text-align: center;
 }
 
-.ribbon {
+.section-results .ribbon {
     display: inline-block;
     vertical-align: middle;
     width: 89px;
@@ -106,7 +87,7 @@ export default {
     font-size: 11px;
 }
 
-.ribbon strong {
+.section-results .ribbon strong {
     display: block;
     font-size: 25px;
     line-height: 1;
@@ -116,25 +97,26 @@ export default {
 
 .section-results .section-head-inner {
     background: #f3f5f7;
-    margin: 0 -10px -10px;
-    padding: 0 10px;
+    margin: 0px;
+    padding: 10px 0px;
+    text-align: center;
 }
 
-.nav-tertiary ul {
+.section-results  .nav-tertiary ul {
     list-style: none outside none;
     margin-right: -10px;
 }
 
-.nav-tertiary ul li:first-child {
+.section-results .nav-tertiary ul li:first-child {
     margin-right: 1px;
 }
 
-.nav-tertiary li {
+.section-results .nav-tertiary li {
     float: right;
     border-left: 1px solid #fcfdfd;
 }
 
-.nav-tertiary a {
+.section-results .nav-tertiary a {
     display: block;
     height: 50px;
     padding: 16px 10px 0;
@@ -160,7 +142,7 @@ a {
     -moz-osx-font-smoothing: grayscale;
 }
 
-.nav-tertiary .alignleft {
+.section-results .nav-tertiary .alignleft {
     float: left;
     border-width: 0 1px 0 0;
     border-style: solid;
@@ -168,17 +150,17 @@ a {
     padding-right: 1px;
 }
 
-.hotels{
+.section-results .hotels{
   margin-top: 55px;
   padding: 5px;
 }
 
-body.rtl .ribbon{
+body.rtl .section-results .ribbon{
     left: auto;
     right: 10px;
 }
 
-body.rtl .dir-option-left{
+body.rtl .section-results  .dir-option-left{
   text-align: left;
 }
 </style>

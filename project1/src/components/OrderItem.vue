@@ -1,12 +1,11 @@
 <template>
-	<div class="row orderItem">
-		<div class="col-xs-11 orderitem-div">
-			<div class="row">
-				<div class="col-xs-6 text-muted location"><i class="glyphicon glyphicon-map-marker"></i>{{order.location}}</div>
-				<div class="col-xs-6 text-right text-muted status" v-bind:class="{ 'text-danger': order.status === 'Cancelled'}">{{order.status}}</div>
+<div class="row orderItem">
+	<div class="col-xs-11 orderitem-div">
+		<div class="order-title-and-status row">
+			<div class="col-xs-6 text-muted location"><i class="glyphicon glyphicon-map-marker"></i>{{order.location}}</div>
+			<div class="col-xs-6 text-right text-muted status" v-bind:class="{ 'text-danger': order.status === 'Cancelled'}">{{order.status}}</div>
 			</div>
-
-			<div class="row flex margintop10">
+		<div class="row flex margintop10">
 				<div class="col-xs-4">
 					<img src="../assets/hotel1.jpg" class="hotel-image">
 				</div>
@@ -26,15 +25,13 @@
 </template>
 
 <script>
-	export default{
-		name: 'OrderItem',
-		
-		data() {
-			return {
-				isA: true
+export default{
+	name: 'OrderItem',
+	data() {
+		return {
+			isA: true
 			}
-		},
-
+			},
 		methods: {
 			gotoDetail() {
 				if (this.order.status == "Cancelled") {
@@ -47,48 +44,30 @@
 		},
 
 		props: {
-			order: {}
-		},
-
-		created: function () {
-		    console.log(this.order);    
-		}
-
-
-	}
+			order: {}},
+created : function () {}
+}
 </script>
 
-<style scoped>
-	.orderItem{
-		background: white;
-		margin: 20px 0 0 0;
-		border-radius: 5px;
-		box-shadow: 0px 5px 15px -1px #aaa;
-		display: flex;
-	}
+<style>
+.orderItem{
+background: white;
+margin: 20px 0 0 0;
+border-radius: 5px;
+box-shadow: 0px 5px 15px -1px #aaa;
+display: flex; }
+.orderItem .orderitem-div{ padding: 5px; }
 
-	.orderItem .orderitem-div{
-		padding: 5px;
-	}
+.orderItem .location { padding: 15px; }
 
-	.orderItem .location{
-		padding: 15px;
-	}
+.orderItem .title { margin: 0;}
 
-	.orderItem .title{
-		margin: 0;
-	}
+.orderItem .status{padding: 15px;}
 
-	.orderItem .status{
-		padding: 15px;
-	}
+.orderItem .hotel-image{width: 100%;border-radius: 5px;}
 
-	.orderItem .hotel-image{
-		width: 100%;
-		border-radius: 5px;
-	}
+.orderItem .godetail{background: #ddd;}
 
-	.orderItem .godetail{
-		background: #ddd;
-	}
+.orderItem .order-title-and-status  {justify-content: space-between;}
+body.rtl .orderItem .order-title-and-status .status{text-align: left;}
 </style>

@@ -1,6 +1,6 @@
 <template>
-	<div class="modal-mask">
-      <div class="modal-wrapper">
+  <div class="modal-mask">
+    <div class="modal-wrapper">
         <div class="modal-container">
 
           <div class="modal-header">
@@ -26,22 +26,17 @@
 </template>
 
 <script>
-	export default {
-	  name: 'Modal',
-	  data () {
-	    return {
-	      
+export default {
+  name: 'Modal',
+    data () {
+      return {  
 	    }
 	  },
-
-	  methods: {
-	    
-	  }
-	}	
+    methods: {}
+}
 </script>
 
-<style scoped="">
-	
+<style>
 .modal-mask {
   position: fixed;
   z-index: 9998;
@@ -100,8 +95,5 @@
   transform: scale(1.1);
 }
 
-.modal-footer{
-	border-top: solid 1px #eee;
-	padding: 20px 30px;
-}
+.modal-footer{border-top: solid 1px #eee; padding: 20px 30px;}
 </style>

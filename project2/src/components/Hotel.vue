@@ -1,7 +1,7 @@
 <template>
 	<div class="hotel" @click="viewDetail">
 		<div class="row">
-			<div class="col-xs-8">
+			<div class="col-xs-8 detail-info">
 				<p class="text-right dir-option-left">Ramada Apollo Amsterdam Center</p>
 				<p class="text-right dir-option-left"><span>asda</span>
 					<img src="../assets/restauranticon.png" class="icon">
@@ -54,33 +54,39 @@
 		margin-top: 10px;
 	}
 
+	.hotel .detail-info{
+		padding: 0 10px;
+	}
+
+	.hotel .detail-info p{margin: 0}
+
 	.hotel-img{
 		width: 100%;
 	}
 
-	.icon{
+	.hotel .icon{
 		width: 15px;
 	}
 
-	.more-info{
+	.hotel .more-info{
 		border-top: solid 1px #eee;
 		margin: 0 -9px;
 		padding: 5px;
 	}
 
-	.more-info .price{
+	.hotel .more-info .price{
 		font-weight: 700;
 	}
 
-	.more-info .info{
+	.hotel .more-info .info{
 		color: rgb(68, 161, 3);
 	}
 
-	body.rtl .dir-option-left{
+	body.rtl .hotel  .dir-option-left{
 		text-align: left;
 	}
 
-	body.rtl .dir-option-right{
+	body.rtl .hotel  .dir-option-right{
 		text-align: right;
 	}
 </style>

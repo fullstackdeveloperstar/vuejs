@@ -1,27 +1,23 @@
 <template>
-	<div class="booking-success">
-	    <div class="header">
-	      <div class="log-div">
-	        <img src="../assets/logo300.png" class="logo300">
-	        <div>SnapTravel</div>
-	      </div>
-
-	    </div>
-
-	    <div class="booking-content">
-
-	      <div class="row flex">
-	      	<div class="col-xs-2 text-center virtical-center">
-	      		<img src="../assets/success.png" class="success-icon">
-	      	</div>
-	      	<div class="col-xs-10">
-	      		<p>Success! Your booking was successful. Want to book another room at the same hotel! <b class="text-primary">Click here.</b></p>
-	      		<p>Confirmation number:3124256</p>
-	      		<p class="text-primary">Resend confirmation email</p>
-	      	</div>
-	      </div>
-
-	      <div class="row">
+<div class="booking-success">
+  <div class="header">
+    <div class="log-div">
+      <img src="../assets/logo300.png" class="logo300">
+      <div>SnapTravel</div>
+      </div>
+      </div>
+      <div class="booking-content">
+        <div class="row flex">
+          <div class="col-xs-2 text-center virtical-center">
+            <img src="../assets/success.png" class="success-icon">
+            </div>
+            <div class="col-xs-10">
+              <p>Success! Your booking was successful. Want to book another room at the same hotel! <b class="text-primary">Click here.</b></p>
+              <p>Confirmation number:3124256</p>
+              <p class="text-primary">Resend confirmation email</p>
+              </div>
+              </div>
+              <div class="row">
             <div class="hotel-title col-xs-7">The New CarltonNahariya Hotel!</div>
             <div class="col-xs-5">
               <div class="rating">
@@ -72,8 +68,6 @@
           </div>
 
           <div class="hr"></div>
-
-
           <hr >
 
           <div class='row margintop10'>
@@ -106,12 +100,8 @@
             <div class="col-xs-6">Refund Policy</div>
             <div class="col-xs-6 text-right dir-option"><u @click="showModal=true">Non Refundable</u></div>
           </div>
-	    </div>
-
-	    <!--modals-->
-
-	    
-
+      </div>
+    <!--modals-->
     <Modal v-if="showModalNon">
       <h3 slot="header">Mandatory Fees</h3>
       <div slot="body">
@@ -119,13 +109,12 @@
             <div class="well">All citizens of Israel will be charged the national value-added tax</div>
       </div>
       <button slot="footer" class="btn btn-default" @click="showModalNon = false">Close</button>
-  </Modal>
-
-
+    </Modal>
+    
     <Modal v-if="showModal">
       <h3 slot="header">Cancllation Details</h3>
       <div slot="body"><p>We do not charge any booking fees. Howerver, the The New Carlton Nahariya Hotel charges the following fees that are payable directly to the hotel upon checkin:</p>
-            <table class="table">
+          <table class="table">
             <thead>
               <tr>
                 <th>Cost</th>
@@ -141,12 +130,12 @@
           </table></div>
       <button slot="footer" class="btn btn-default" @click="showModal = false">Close</button>
   </Modal>
-		<!--end modal-->
-	</div>
+  <!--end modal-->
+</div>
 </template>
 
 <script>
-  import Modal from './Modal.vue';
+import Modal from './Modal.vue'
 export default {
   name: 'BookingSuccess',
   data () {
@@ -168,72 +157,29 @@ export default {
 
 <style scoped>
 
-  .booking-success{
-    
-  }
+  .booking-success{ }
 
-  .booking-success .header{
-      height: 50px;
-      width: 100%;
-      background: #f49244;
-      display: inline-flex;
-      color: white;
-    }
+  .booking-success .header{height: 50px; width: 100%; background: #f49244;display: inline-flex; color: white; }
 
-  .booking-success .header .log-div{
-    padding-left: 5%;
-    display: inline-flex;
-    line-height: 50px;
-    font-weight: 700;
-  }
+  .booking-success .header .log-div{padding-left: 5%; display: inline-flex;line-height: 50px; font-weight: 700;}
 
-  .booking-success .header .log-div .logo300{
-    width: 50px;
-    height: 50px;
-  }
+  .booking-success .header .log-div .logo300{width: 50px; height: 50px;}
 
-  body.rtl .booking .header .detail-div{
-    text-align: left;
-  }
+  .booking-success .booking-content{padding: 20px;}
 
-  .booking-success .booking-content{
-  	padding: 20px;
-  }
+  .booking-success .success-icon{width: 50px;}
 
-  .booking-success .success-icon{
-    width: 50px;
-  }
+  .booking-success .hotel-image{width: 50%;border-radius: 5px;}
+  
+  .booking-success .table {width: 100%; max-width: 100%; margin-bottom: 1rem; background-color: transparent; }
 
-  .booking-success .hotel-image{
-    width: 50%;
-    border-radius: 5px;
-  }
-  body.rtl .booking-success .dir-option{
-    text-align: left;
-  }
+  .booking-success table { border-collapse: collapse; }
 
-  .booking-success .table {
-      width: 100%;
-      max-width: 100%;
-      margin-bottom: 1rem;
-      background-color: transparent;
-  }
+  .booking-success .table thead th { vertical-align: bottom; border-bottom: 2px solid #dee2e6;}
 
-  .booking-success table {
-      border-collapse: collapse;
-  }
+  .booking-success .table td, .table th { padding: .75rem; vertical-align: top; }
+  
+  .booking-success th { text-align: inherit; }
 
-  .booking-success .table thead th {
-      vertical-align: bottom;
-      border-bottom: 2px solid #dee2e6;
-  }
-
-  .booking-success .table td, .table th {
-      padding: .75rem;
-      vertical-align: top;
-      
-  }
-  .booking-success th {
-      text-align: inherit;
-  }
+  .booking-success .row {justify-content: space-between}
 </style>

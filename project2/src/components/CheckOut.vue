@@ -134,7 +134,7 @@
                                     <h4 class="dir-option-left-me">הוסף ביטוח נסיעות לחו"ל החל מ- $1.50<br /> (מחיר לתכנית הבסיסית ללא כיסוי צד ג' ואיתור וחילוץ) <a href="#" target="_blank">תמצית הכיסויים</a></h4>
                                     <div class="form-row">
                                         <div class="form-controls form-controls-select">
-                                            5<select class="select select-popup-toggle select-insurance input-field dir-option-left-me">
+                                            <select class="select select-popup-toggle select-insurance input-field dir-option-left-me">
                                                 <option value="">
                                                     בחר סוג הפוליסה
                                                 </option>
@@ -332,7 +332,7 @@
     border-color: #fff;
 }
 
-.checkout .section-nav li.step-current {
+.section-checkout .checkout .section-nav li.step-current {
     color: #35993f;
 }
 
@@ -411,13 +411,13 @@ body.ltr .section-checkout .section-nav li i{
     transform: rotate(180deg);
 }
 
-.ico-airplane-checkout {
+.section-checkout .ico-airplane-checkout {
     width: 29px;
     height: 35px;
     background-image: url(../assets/ico-airplane-checkout.png);
 }
 
-.logo, [class^="ico-"], .slider-gallery .owl-prev:before, .slider-gallery .owl-next:before {
+.section-checkout .logo, [class^="ico-"], .slider-gallery .owl-prev:before, .slider-gallery .owl-next:before {
     display: inline-block;
     vertical-align: middle;
     background-repeat: no-repeat;
@@ -523,10 +523,10 @@ body.ltr .section-checkout .section-nav li:after {
 
 
 
-.form-checkout{
+.section-checkout .form-checkout{
 	padding: 10px;
 }
-.form-checkout .form-section-body hr { height: 1px; border: 0; margin: 0 7px; background-color: #eaeae0; }
+.section-checkout .form-checkout .form-section-body hr { height: 1px; border: 0; margin: 0 7px; background-color: #eaeae0; }
 
 
 .form-checkout h2 { font-size: 18px; line-height: 20px; color: #2a3335; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 5px; }
@@ -691,35 +691,35 @@ body.ltr .form-checkout .form-actions .btn{
 .form-checkout input[type="date"]:focus + .date-placeholder,
 .form-checkout input[type="date"]:valid + .date-placeholder { opacity: 0; }
 
-.ico-airplane-checkout {
+.section-checkout .ico-airplane-checkout {
     width: 29px;
     height: 35px;
     background-image: url(../assets/ico-airplane-checkout.png);
 }
 
-.ico-checkout-email {
+.section-checkout .ico-checkout-email {
     width: 18px;
     height: 13px;
     background-image: url(../assets/ico-checkout-email.png);
 }
 
-.ico-checkout-person {
+.section-checkout .ico-checkout-person {
     width: 16px;
     height: 20px;
     background-image: url(../assets/ico-checkout-person.png);
 }
 
-.ico-checkout-phone {
+.section-checkout .ico-checkout-phone {
     width: 16px;
     height: 17px;
     background-image: url(../assets/ico-checkout-phone.png);
 }
 
-body.ltr .dir-option-left-me{
+body.ltr .section-checkout .dir-option-left-me{
     text-align: left;
 }
 
-body.ltr .dir-option-right-me{
+body.ltr .section-checkout .dir-option-right-me{
     text-align: right;
 }
 </style>

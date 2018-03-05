@@ -1,26 +1,22 @@
 <template>
-	<div class="cancelled">
-	    <div class="header">
-	      <div class="log-div">
-	        <img src="../assets/logo300.png" class="logo300">
-	        <div>SnapTravel</div>
-	      </div>
-
-	    </div>
-
-	    <div class="booking-content">
-
-	      <div class="row flex">
-	      	<div class="col-xs-2 text-center virtical-center">
-	      		<img src="../assets/warning.png" class="warning-icon">
-	      	</div>
-	      	<div class="col-xs-10">
-	      		<p>Your booking was cancelled.</p>
-	      		<p>Confirmation number: 3124256</p>
-	      	</div>
-	      </div>
-
-	      <div class="row">
+  <div class="cancelled">
+    <div class="header">
+        <div class="log-div">
+          <img src="../assets/logo300.png" class="logo300">
+          <div>SnapTravel</div>
+          </div>
+        </div>
+      <div class="cancelled-content">
+        <div class="row flex">
+          <div class="col-xs-2 text-center virtical-center">
+            <img src="../assets/warning.png" class="warning-icon">
+            </div>
+          <div class="col-xs-10">
+            <p>Your booking was cancelled.</p>
+            <p>Confirmation number: 3124256</p>
+            </div>
+          </div>
+        <div class="row">
             <div class="hotel-title col-xs-7">The New CarltonNahariya Hotel!</div>
             <div class="col-xs-5">
               <div class="rating">
@@ -57,59 +53,49 @@
 
           <div class="row margintop10">
             <div class="col-xs-8">Wednesday February21, 2018</div>
-            <div class="col-xs-4 text-right dir-option">Check-in</div>
+            <div class="col-xs-4 text-right">Check-in</div>
           </div>
 
           <div class="row margintop10">
             <div class="col-xs-8">Thursday February 22, 2018</div>
-            <div class="col-xs-4 text-right dir-option">Check-out</div>
+            <div class="col-xs-4 text-right">Check-out</div>
           </div>
 
           <div class="row margintop10">
             <div class="col-xs-8">1 night, 1 room, 2 adults</div>
-            <div class="col-xs-4 text-right dir-option">For</div>
+            <div class="col-xs-4 text-right">For</div>
           </div>
 
           <div class="hr"></div>
-
-
           <hr>
 
           <div class='row margintop10'>
             <div class="col-xs-6">Room Subtotal:</div>
-            <div class="col-xs-6 text-right text-danger dir-option"><del>USD95.57</del></div>
+            <div class="col-xs-6 text-right text-danger"><del>USD95.57</del></div>
           </div>
 
           <div class="row margintop10">
             <div class="col-xs-6"></div>
-            <div class="col-xs-6 text-right text-success dir-option">USD79.64</div>
+            <div class="col-xs-6 text-right text-success">USD79.64</div>
           </div>
 
           <div class="row margintop10">
             <div class="col-xs-6"><u>Taxes:</u></div>
-            <div class="col-xs-6 text-right dir-option" >USD10.36</div>
+            <div class="col-xs-6 text-right" >USD10.36</div>
           </div>
           
           <hr>
 
           <div class="row margintop10">
             <div class="col-xs-6"><b>Total Price:</b></div>
-            <div class="col-xs-6 text-right dir-option"><b>USD90.00</b></div>
+            <div class="col-xs-6 text-right"><b>USD90.00</b></div>
           </div>
 
           <div class="margintop10 text-danger">
             <i><i>Note:</i> Total Price exculdes resort fees directly collected by the hotel at checkin. <u data-toggle="modal" data-target="#more-info-modal">More info</u></i>
           </div>
-
-          
-	    </div>
-
-	    <!--modals-->
-
-	    
-
-		<!--end modal-->
-	</div>
+        </div>
+  </div>
 </template>
 
 <script>
@@ -129,43 +115,17 @@ export default {
 
 <style scoped>
 
-  .cancelled .header{
-      height: 50px;
-      width: 100%;
-      background: #f49244;
-      display: inline-flex;
-      color: white;
-    }
+.cancelled .header{height: 50px;width: 100%; background: #f49244;display: inline-flex;color: white;}
 
-  .cancelled .header .log-div{
-    padding-left: 5%;
-    display: inline-flex;
-    line-height: 50px;
-    font-weight: 700;
-  }
+.cancelled .header .log-div{ padding-left: 5%;display: inline-flex;line-height: 50px;font-weight: 700;}
 
-  .cancelled .header .log-div .logo300{
-    width: 50px;
-    height: 50px;
-  }
+.cancelled .header .log-div .logo300{width: 50px; height: 50px; }
 
+.cancelled .cancelled-content{padding: 20px;}
 
+.cancelled .warning-icon{ width: 50px;}
 
-.cancelled .cancelled-content{
-	padding: 20px;
-}
+.cancelled .hotel-image{ width: 50%; border-radius: 5px;}
 
-.cancelled .warning-icon{
-	width: 50px;
-}
-
-.cancelled .hotel-image{
-  width: 50%;
-  border-radius: 5px;
-}
-
-body.rtl .cancelled .dir-option{
-  text-align: left;
-}
-
+.cancelled .row{justify-content: space-between;}
 </style>
