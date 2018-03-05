@@ -20,7 +20,7 @@
 	      			<label class="text-muted">Upcoming</label>
 	      		</div>
 	      	</div>
-	      	<OrderItem  v-for="order in orders" :order="order"></OrderItem>
+	      	<OrderItem  v-for="(order, index) in orders" :order="order" :key="index"></OrderItem>
 	    </div>
 	</div>
 </template>
