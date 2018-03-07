@@ -75,7 +75,7 @@
     <!-- end info title -->
 
     <!-- flight item -->
-      <div class="flight-item-panel">
+      <div class="flight-item-panel" @click="gotosecondpage">
         <div class="item-header flex">
           <div> nasdjf </div>
           <div> - </div>
@@ -180,19 +180,25 @@
           </div>
         </div>
 
-        <div class="item-footer flex">
-          <div class="footer-icon">
-            <i class="fas fa-plus-circle"></i>
+        <div class="item-footer">
+          <div class="flex" @click="toggleShow1()">
+            <div class="footer-icon">
+              <span v-show="!isShow1"><i class="fas fa-plus-circle"></i></span>
+              <span v-show="isShow1"><i class="fas fa-minus-circle"></i></span>
+            </div>
+            <div class="footer-title">
+              adfa aldkfjal  adkfja
+            </div>
           </div>
-          <div class="footer-title">
-            adfa aldkfjal  adkfja
-          </div>
+          <div v-show="isShow1">
+            content
+          </div>    
         </div>
       </div>
     <!-- end flight item -->
 
     <!-- flight item -->
-      <div class="flight-item-panel">
+      <div class="flight-item-panel"  @click="gotosecondpage">
         <div class="item-header flex">
           <div> nasdjf </div>
           <div> - </div>
@@ -297,253 +303,19 @@
           </div>
         </div>
 
-        <div class="item-footer flex">
-          <div class="footer-icon">
-            <i class="fas fa-minus-circle"></i>
-          </div>
-          <div class="footer-title">
-            adfa aldkfjal  adkfja
-          </div>
-        </div>
-      </div>
-    <!-- end flight item -->
-
-    <!-- flight item -->
-      <div class="flight-item-panel">
-        <div class="item-header flex">
-          <div> nasdjf </div>
-          <div> - </div>
-          <div class="title-1"> Alitalia </div>
-        </div>
-
-        <div class="item-content">
-          <div class="item-detail flex">
-            <div class="detail-logo">
-              <img src="../assets/flight-logo.png">
+        <div class="item-footer">
+          <div class="flex" @click="toggleShow2()">
+            <div class="footer-icon">
+              <span v-show="!isShow2"><i class="fas fa-plus-circle"></i></span>
+              <span v-show="isShow2"><i class="fas fa-minus-circle"></i></span>
             </div>
-
-            <div class="start-time">
-              <div class="title">
-                adkfj
-              </div>
-              <div class="time">
-                18:00
-              </div>
-            </div>
-
-            <div class="detail-router">
-              <div class="top-info">
-                <div>adkfj aasd dk</div>
-                <div>:</div>
-                <div>8:10</div>
-              </div>
-
-              <div class="middle-line">
-                <span>&nbsp;</span>
-              </div>
-
-              <div class="bottom-info">
-                <div class="start-station">CGD</div>
-                <div>1;adsl</div>
-                <div class="end-station">TLV</div>
-              </div>
-            </div>
-
-            <div class="end-time">
-              <div class="title">
-                nm n,m
-              </div>
-              <div class="time">
-                03:10
-              </div>
+            <div class="footer-title">
+              adfa aldkfjal  adkfja
             </div>
           </div>
-
-          <div class="item-detail flex">
-            <div class="detail-logo">
-              <img src="../assets/flight-logo.png">
-            </div>
-
-            <div class="start-time">
-              <div class="title">
-                adkfj
-              </div>
-              <div class="time">
-                18:00
-              </div>
-            </div>
-
-            <div class="detail-router">
-              <div class="top-info">
-                <div>adkfj aasd dk</div>
-                <div>:</div>
-                <div>8:10</div>
-              </div>
-
-              <div class="middle-line">
-                <span>&nbsp;</span>
-              </div>
-
-              <div class="bottom-info">
-                <div class="start-station">CGD</div>
-                <div>1;adsl</div>
-                <div class="end-station">TLV</div>
-              </div>
-            </div>
-
-            <div class="end-time">
-              <div class="title">
-                nm n,m
-              </div>
-              <div class="time">
-                03:10
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="item-more flex">
-          <div class="note">
-            <i class="fas fa-info-circle"></i> aksdjf a askdjflad
-          </div>
-
-          <div class="price">
-            <p class="title">adff a</p>
-            <p class="amount">$398</p>
-          </div>
-        </div>
-      </div>
-    <!-- end flight item -->
-
-    <!-- flight item -->
-      <div class="flight-item-panel">
-        <div class="item-header flex">
-          <div> nasdjf </div>
-          <div> - </div>
-          <div class="title-1"> Alitalia </div>
-        </div>
-
-        <div class="item-content">
-          <div class="item-step flex">
-            
-            <div class="item-arrow flex">
-              <i class="arrow-bar"></i>
-              <i class="arrow-triangle"></i> 
-            </div>
-
-            <div class="item-detail flex">
-              <div class="flex router-info">
-                <div class="detail-logo">
-                  <img src="../assets/flight-logo.png">
-                </div>
-
-                <div class="start-time">
-                  <div class="title">
-                    adkfj
-                  </div>
-                  <div class="time">
-                    18:00
-                  </div>
-                </div>
-
-                <div class="detail-router">
-                  <div class="bottom-info">
-                    <div class="start-station">CGD</div>
-                    <div>1;adsl</div>
-                    <div class="end-station">TLV</div>
-                  </div>
-                  
-                  <div class="middle-line">
-                  </div>
-
-                  <div></div>
-                  
-                </div>
-
-                <div class="end-time">
-                  <div class="title">
-                    nm n,m
-                  </div>
-                  <div class="time">
-                    03:10
-                  </div>
-                </div>
-              </div>
-
-              <div class="bottom-info flex">
-                <div class="bottom-info-item">adfa</div>
-                <div class="bottom-info-item">adf</div>
-                <div class="bottom-info-item">adfa</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="item-step flex">
-            <div class="item-arrow flex">
-              <i class="dots"></i>
-            </div>
-
-            <div class="item-detail flex middle-detail">
-              <p>aldjf adf jlasdkj adlfkj aldkjf</p>
-              <p>sdjfla ajdfl olkdjf oewrjndvfand,cvoiuwe</p>
-            </div>
-          </div>
-
-          <div class="item-step flex">
-            
-            <div class="item-arrow flex">
-              <i class="arrow-bar"></i>
-              <i class="arrow-triangle"></i> 
-            </div>
-
-            <div class="item-detail flex">
-              <div class="flex router-info">
-                <div class="detail-logo">
-                  <img src="../assets/flight-logo.png">
-                </div>
-
-                <div class="start-time">
-                  <div class="title">
-                    adkfj
-                  </div>
-                  <div class="time">
-                    18:00
-                  </div>
-                </div>
-
-                <div class="detail-router">
-                  <div class="bottom-info">
-                    <div class="start-station">CGD</div>
-                    <div>1;adsl</div>
-                    <div class="end-station">TLV</div>
-                  </div>
-                  
-                  <div class="middle-line">
-                  </div>
-
-                  <div></div>
-                  
-                </div>
-
-                <div class="end-time">
-                  <div class="title">
-                    nm n,m
-                  </div>
-                  <div class="time">
-                    03:10
-                  </div>
-                </div>
-              </div>
-
-              <div class="bottom-info flex">
-                <div class="bottom-info-item">adfa</div>
-                <div class="bottom-info-item">adf</div>
-                <div class="bottom-info-item">adfa</div>
-              </div>
-            </div>
-          </div>
-
+          <div v-show="isShow2">
+            content
+          </div> 
         </div>
       </div>
     <!-- end flight item -->
@@ -557,8 +329,26 @@ export default {
   name: 'Flight',
   data () {
     return {
-      
+      isShow1: false,
+      isShow2: false
     }
+  },
+
+  methods: {
+    toggleShow1(e){
+      console.log(e);
+      this.isShow1 = !this.isShow1   
+    },
+    toggleShow2(){
+      this.isShow2 = !this.isShow2
+    },
+     gotosecondpage(e){
+       console.log(e);
+       console.log(e.target.className);
+       if(e.target.className != 'footer-title'){
+        this.$router.push({ path: 'orderlist' })
+       }
+     }
   }
 }
 </script>

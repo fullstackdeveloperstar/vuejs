@@ -319,7 +319,7 @@
       <!-- end total price -->
 
       <div class="checkout-btn">
-          <button>adskf ndfndnnm</button>
+          <button @click="gotonext">adskf ndfndnnm</button>
       </div>
       
       <!-- drop downs -->
@@ -338,6 +338,11 @@
 import DropDown from "./DropDown.vue"
 export default {
   name: "OrderList",
+  methods: {
+    gotonext() {
+      this.$router.push({ path: 'stepflow' })
+    }
+  },
   components: {
       DropDown
   }
