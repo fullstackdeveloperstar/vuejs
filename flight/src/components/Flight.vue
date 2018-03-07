@@ -180,19 +180,13 @@
           </div>
         </div>
 
-        <div class="item-footer">
-          <div class="flex" @click="toggleShow1()">
-            <div class="footer-icon">
-              <span v-show="!isShow1"><i class="fas fa-plus-circle"></i></span>
-              <span v-show="isShow1"><i class="fas fa-minus-circle"></i></span>
-            </div>
-            <div class="footer-title">
-              adfa aldkfjal  adkfja
-            </div>
+        <div class="item-footer flex">
+          <div class="footer-icon">
+            <i class="fas fa-plus-circle"></i>
           </div>
-          <div v-show="isShow1">
-            content
-          </div>    
+          <div class="footer-title">
+            adfa aldkfjal  adkfja
+          </div>
         </div>
       </div>
     <!-- end flight item -->
@@ -303,19 +297,13 @@
           </div>
         </div>
 
-        <div class="item-footer">
-          <div class="flex" @click="toggleShow2()">
-            <div class="footer-icon">
-              <span v-show="!isShow2"><i class="fas fa-plus-circle"></i></span>
-              <span v-show="isShow2"><i class="fas fa-minus-circle"></i></span>
-            </div>
-            <div class="footer-title">
-              adfa aldkfjal  adkfja
-            </div>
+        <div class="item-footer flex">
+          <div class="footer-icon">
+            <i class="fas fa-minus-circle"></i>
           </div>
-          <div v-show="isShow2">
-            content
-          </div> 
+          <div class="footer-title">
+            adfa aldkfjal  adkfja
+          </div>
         </div>
       </div>
     <!-- end flight item -->
@@ -569,17 +557,7 @@ export default {
   name: 'Flight',
   data () {
     return {
-      isShow1: false,
-      isShow2: false
-    }
-  },
-
-  methods: {
-    toggleShow1(){
-      this.isShow1 = !this.isShow1
-    },
-    toggleShow2(){
-      this.isShow2 = !this.isShow2
+      
     }
   }
 }
