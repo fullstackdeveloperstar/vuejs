@@ -180,11 +180,11 @@
           </div>
         </div>
 
-        <div class="item-footer">
-          <div class="flex" @click="toggleShow1()">
+        <div class="item-footer footer">
+          <div class="flex footer" @click="toggleShow1()">
             <div class="footer-icon">
-              <span v-show="!isShow1"><i class="fas fa-plus-circle"></i></span>
-              <span v-show="isShow1"><i class="fas fa-minus-circle"></i></span>
+              <span class="footer" v-show="!isShow1"><i class="fas fa-plus-circle"></i></span>
+              <span class="footer" v-show="isShow1"><i class="fas fa-minus-circle"></i></span>
             </div>
             <div class="footer-title">
               adfa aldkfjal  adkfja
@@ -304,12 +304,12 @@
         </div>
 
         <div class="item-footer">
-          <div class="flex" @click="toggleShow2()">
+          <div class="flex footer" @click="toggleShow2()">
             <div class="footer-icon">
-              <span v-show="!isShow2"><i class="fas fa-plus-circle"></i></span>
-              <span v-show="isShow2"><i class="fas fa-minus-circle"></i></span>
+              <span v-show="!isShow2" class="footer"><i class="fas fa-plus-circle"></i></span>
+              <span v-show="isShow2" class="footer"><i class="fas fa-minus-circle"></i></span>
             </div>
-            <div class="footer-title">
+            <div class="footer-title footer">
               adfa aldkfjal  adkfja
             </div>
           </div>
@@ -345,7 +345,7 @@ export default {
      gotosecondpage(e){
        console.log(e);
        console.log(e.target.className);
-       if(e.target.className != 'footer-title'){
+       if(!e.target.className.includes('footer')){
         this.$router.push({ path: 'orderlist' })
        }
      }
