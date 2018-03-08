@@ -7,28 +7,28 @@
       </div>
       </div>
       <div class="booking-content">
-        <div class="row flex">
-          <div class="col-xs-2 text-center virtical-center">
+        <div class="flex virtical-center">
+          <div class="text-center">
             <img src="../assets/success.png" class="success-icon">
-            </div>
-            <div class="col-xs-10">
-              <p>Success! Your booking was successful. Want to book another room at the same hotel! <b class="text-primary">Click here.</b></p>
-              <p>Confirmation number:3124256</p>
-              <p class="text-primary">Resend confirmation email</p>
-              </div>
-              </div>
-              <div class="row">
-            <div class="hotel-title col-xs-7">The New CarltonNahariya Hotel!</div>
-            <div class="col-xs-5">
-              <div class="rating">
-                <span class="star-fill"></span>
-                <span class="star-fill"></span>
-                <span class="star-fill"></span>
-                <span class="star-fill"></span>
-                <span class="star-empty"></span>
-              </div>
+          </div>
+          <div class="col-xs-10">
+            <p>Success! Your booking was successful. Want to book another room at the same hotel! <b class="text-primary">Click here.</b></p>
+            <p>Confirmation number:3124256</p>
+            <p class="text-primary">Resend confirmation email</p>
+          </div>
+        </div>
+        <div class="flex justify-space-between">
+          <div class="hotel-title">The New CarltonNahariya Hotel!</div>
+          <div class="">
+            <div class="rating">
+              <span class="star-fill"></span>
+              <span class="star-fill"></span>
+              <span class="star-fill"></span>
+              <span class="star-fill"></span>
+              <span class="star-empty"></span>
             </div>
           </div>
+        </div>
 
           <div class="margintop20 text-center">
             <img src="../assets/hotel.jpg" class="hotel-image">
@@ -52,53 +52,53 @@
 
           <hr>
 
-          <div class="row margintop10">
-            <div class="col-xs-8">Wednesday February21, 2018</div>
-            <div class="col-xs-4 text-right dir-option">Check-in</div>
+          <div class="flex justify-space-between margintop10">
+            <div class="">Wednesday February21, 2018</div>
+            <div class="">Check-in</div>
           </div>
 
-          <div class="row margintop10">
-            <div class="col-xs-8">Thursday February 22, 2018</div>
-            <div class="col-xs-4 text-right dir-option">Check-out</div>
+          <div class="flex justify-space-between margintop10">
+            <div class="">Thursday February 22, 2018</div>
+            <div class="">Check-out</div>
           </div>
 
-          <div class="row margintop10">
-            <div class="col-xs-8 ">1 night, 1 room, 2 adults</div>
-            <div class="col-xs-4 text-right dir-option">For</div>
+          <div class="flex justify-space-between margintop10">
+            <div class=" ">1 night, 1 room, 2 adults</div>
+            <div class="">For</div>
           </div>
 
           <div class="hr"></div>
           <hr >
 
-          <div class='row margintop10'>
-            <div class="col-xs-6">Room Subtotal:</div>
-            <div class="col-xs-6 text-right text-danger dir-option"><del>USD95.57</del></div>
+          <div class='flex justify-space-between margintop10'>
+            <div class="">Room Subtotal:</div>
+            <div class="text-danger"><del>USD95.57</del></div>
           </div>
 
-          <div class="row margintop10">
-            <div class="col-xs-6"></div>
-            <div class="col-xs-6 text-right text-success dir-option">USD79.64</div>
+          <div class="flex justify-space-between margintop10">
+            <div class=""></div>
+            <div class="text-success">USD79.64</div>
           </div>
 
-          <div class="row margintop10">
-            <div class="col-xs-6"><u>Taxes:</u></div>
-            <div class="col-xs-6 text-right dir-option">USD10.36</div>
+          <div class="flex justify-space-between margintop10">
+            <div class=""><u>Taxes:</u></div>
+            <div class="">USD10.36</div>
           </div>
           
           <hr>
 
-          <div class="row margintop10">
-            <div class="col-xs-6"><b>Total Price:</b></div>
-            <div class="col-xs-6 text-right dir-option"><b>USD90.00</b></div>
+          <div class="flex justify-space-between margintop10">
+            <div class=""><b>Total Price:</b></div>
+            <div class=""><b>USD90.00</b></div>
           </div>
 
           <div class="text-danger margintop10">
             <i>Note: Total Price exculdes resort fees directly collected by the hotel at checkin. <u @click="showModalNon=true">More info</u></i>
           </div>
 
-          <div class="row margintop20">
-            <div class="col-xs-6">Refund Policy</div>
-            <div class="col-xs-6 text-right dir-option"><u @click="showModal=true">Non Refundable</u></div>
+          <div class="flex justify-space-between margintop20">
+            <div class="">Refund Policy</div>
+            <div class=""><u @click="showModal=true">Non Refundable</u></div>
           </div>
       </div>
     <!--modals-->
@@ -108,7 +108,7 @@
         <p>We do not charge any booking fees. Howerver, the The New Carlton Nahariya Hotel charges the following fees that are payable directly to the hotel upon checkin:</p>
             <div class="well">All citizens of Israel will be charged the national value-added tax</div>
       </div>
-      <button slot="footer" class="btn btn-default" @click="showModalNon = false">Close</button>
+      <button slot="footer" class="close-default-btn" @click="showModalNon = false">Close</button>
     </Modal>
     
     <Modal v-if="showModal">
@@ -128,7 +128,7 @@
               </tr>
             </tbody>
           </table></div>
-      <button slot="footer" class="btn btn-default" @click="showModal = false">Close</button>
+      <button slot="footer" class="close-default-btn" @click="showModal = false">Close</button>
   </Modal>
   <!--end modal-->
 </div>
@@ -182,4 +182,41 @@ export default {
   .booking-success th { text-align: inherit; }
 
   .booking-success .row {justify-content: space-between}
+
+  .booking-success .virtical-center{align-items: center;}
+
+
+  .booking-success.badge{ border-radius: 50%; background: #f49244; color: white; padding: 5px 7px; font-size: 15px;}
+
+.booking-success .rating{ font-size: 20px; padding: 0 5px; border: solid 1px #ffcb00; border-radius: 7px; display: inline-flex; float: right;}
+
+.booking-success .rating .star-fill{ margin: 0px;}
+
+.booking-success .rating .star-fill:before{ content: "\2605"; color: rgb(255, 203, 0); }
+
+.booking-success .rating .star-empty{ margin: 0px; }
+
+.booking-success .rating .star-empty:before{ content: "\2605"; color: rgb(178, 187, 178); }
+
+.booking-success .text-center{text-align: center;}
+
+.booking-success .text-danger{color: #a94442;}
+
+.booking-success .text-success{color: #3c763d;}
+
+.booking-success .text-primary{color: #337ab7;}
+
+.booking-success .text-muted{color: #888;}
+
+.booking-success .justify-space-between{justify-content: space-between}
+
+.booking-success.margintop20{margin-top:20px;}
+
+.booking-success hr, .booking-success .hr{border:0;border-bottom: solid 0.5px gray; margin-top: 20px; margin-bottom: 20px; }
+
+.booking-success .margintop10{margin-top: 10px;}
+
+.booking-success .well{border: solid 1px #888; border-radius: 5px;padding: 10px;background: #ddd;}
+
+.booking-success .close-default-btn{background: white;color: #888; border: solid 1px #888; border-radius: 5px;padding: 5px 10px;}
 </style>

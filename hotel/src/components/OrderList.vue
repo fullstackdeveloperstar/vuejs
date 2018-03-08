@@ -1,7 +1,7 @@
 <template>
 	<div class="orderList">
 		<div class="orderlist-header">
-	      <div class="row">
+	      <div class="flex">
 			  <div class="col-xs">
 			  	<img src="../assets/logo300.png" class="logo-icon">
 			  </div>

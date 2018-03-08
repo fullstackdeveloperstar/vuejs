@@ -7,16 +7,16 @@
           </div>
         </div>
       <div class="cancelled-content">
-        <div class="row flex">
-          <div class="col-xs-2 text-center virtical-center">
+        <div class="flex">
+          <div class="text-center virtical-center">
             <img src="../assets/warning.png" class="warning-icon">
-            </div>
+          </div>
           <div class="col-xs-10">
             <p>Your booking was cancelled.</p>
             <p>Confirmation number: 3124256</p>
-            </div>
           </div>
-        <div class="row">
+        </div>
+        <div class="flex justify-space-between">
             <div class="hotel-title col-xs-7">The New CarltonNahariya Hotel!</div>
             <div class="col-xs-5">
               <div class="rating">
@@ -51,44 +51,44 @@
 
           <hr>
 
-          <div class="row margintop10">
-            <div class="col-xs-8">Wednesday February21, 2018</div>
-            <div class="col-xs-4 text-right">Check-in</div>
+          <div class="flex justify-space-between margintop10">
+            <div class="">Wednesday February21, 2018</div>
+            <div class="">Check-in</div>
           </div>
 
-          <div class="row margintop10">
-            <div class="col-xs-8">Thursday February 22, 2018</div>
-            <div class="col-xs-4 text-right">Check-out</div>
+          <div class="flex justify-space-between margintop10">
+            <div class="">Thursday February 22, 2018</div>
+            <div class="">Check-out</div>
           </div>
 
-          <div class="row margintop10">
-            <div class="col-xs-8">1 night, 1 room, 2 adults</div>
-            <div class="col-xs-4 text-right">For</div>
+          <div class="flex justify-space-between margintop10">
+            <div class="">1 night, 1 room, 2 adults</div>
+            <div class="">For</div>
           </div>
 
-          <div class="hr"></div>
+         
           <hr>
 
-          <div class='row margintop10'>
-            <div class="col-xs-6">Room Subtotal:</div>
-            <div class="col-xs-6 text-right text-danger"><del>USD95.57</del></div>
+          <div class='flex justify-space-between margintop10'>
+            <div class="">Room Subtotal:</div>
+            <div class="text-danger"><del>USD95.57</del></div>
           </div>
 
-          <div class="row margintop10">
-            <div class="col-xs-6"></div>
-            <div class="col-xs-6 text-right text-success">USD79.64</div>
+          <div class="flex justify-space-between margintop10">
+            <div class=""></div>
+            <div class=" text-success">USD79.64</div>
           </div>
 
-          <div class="row margintop10">
-            <div class="col-xs-6"><u>Taxes:</u></div>
-            <div class="col-xs-6 text-right" >USD10.36</div>
+          <div class="flex justify-space-between margintop10">
+            <div class=""><u>Taxes:</u></div>
+            <div class="" >USD10.36</div>
           </div>
           
           <hr>
 
-          <div class="row margintop10">
-            <div class="col-xs-6"><b>Total Price:</b></div>
-            <div class="col-xs-6 text-right"><b>USD90.00</b></div>
+          <div class="flex justify-space-between margintop10">
+            <div class=""><b>Total Price:</b></div>
+            <div class=""><b>USD90.00</b></div>
           </div>
 
           <div class="margintop10 text-danger">
@@ -128,4 +128,32 @@ export default {
 .cancelled .hotel-image{ width: 50%; border-radius: 5px;}
 
 .cancelled .row{justify-content: space-between;}
+
+.cancelled .rating{ font-size: 20px; padding: 0 5px; border: solid 1px #ffcb00; border-radius: 7px; display: inline-flex; float: right;}
+
+.cancelled .rating .star-fill{ margin: 0px;}
+
+.cancelled .rating .star-fill:before{ content: "\2605"; color: rgb(255, 203, 0); }
+
+.cancelled .rating .star-empty{ margin: 0px; }
+
+.cancelled .rating .star-empty:before{ content: "\2605"; color: rgb(178, 187, 178); }
+
+.cancelled .text-center{text-align: center;}
+
+.cancelled .text-danger{color: #a94442;}
+
+.cancelled .text-success{color: #3c763d;}
+
+.cancelled .text-primary{color: #337ab7;}
+
+.cancelled .text-muted{color: #888;}
+
+.cancelled .justify-space-between{justify-content: space-between}
+
+.cancelled .margintop20{margin-top:20px;}
+
+.cancelled hr, .cancelled .hr{border:0;border-bottom: solid 1px gray; margin-top: 20px; margin-bottom: 20px; }
+
+.cancelled .margintop10{margin-top: 10px;}
 </style>
