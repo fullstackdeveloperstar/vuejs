@@ -23,10 +23,5 @@ export default {
 </script>
 
 <style scoped>
-.google-map {
-  width: 100%;
-  height: 200px;
-  margin: 0 auto;
-  background: gray;
-}
+.google-map {  width: 100%;  height: 200px;  margin: 0 auto;  background: gray;}
 </style>

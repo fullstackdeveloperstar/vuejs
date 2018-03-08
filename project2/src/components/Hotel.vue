@@ -48,45 +48,23 @@
 </script>
 
 <style scoped>
-	.hotel{
-		border: solid 1px #eee;
-		padding: 10px;
-		margin-top: 10px;
-	}
+	.hotel{		border: solid 1px #eee;		padding: 10px;		margin-top: 10px;	}
 
-	.hotel .detail-info{
-		padding: 0 10px;
-	}
+	.hotel .detail-info{		padding: 0 10px;	}
 
 	.hotel .detail-info p{margin: 0}
 
-	.hotel-img{
-		width: 100%;
-	}
+	.hotel-img{		width: 100%;	}
 
-	.hotel .icon{
-		width: 15px;
-	}
+	.hotel .icon{		width: 15px;	}
 
-	.hotel .more-info{
-		border-top: solid 1px #eee;
-		margin: 0 -9px;
-		padding: 5px;
-	}
+	.hotel .more-info{		border-top: solid 1px #eee;		margin: 0 -9px;		padding: 5px;	}
 
-	.hotel .more-info .price{
-		font-weight: 700;
-	}
+	.hotel .more-info .price{		font-weight: 700;	}
 
-	.hotel .more-info .info{
-		color: rgb(68, 161, 3);
-	}
+	.hotel .more-info .info{		color: rgb(68, 161, 3);	}
 
-	body.rtl .hotel  .dir-option-left{
-		text-align: left;
-	}
+	body.rtl .hotel  .dir-option-left{		text-align: left;	}
 
-	body.rtl .hotel  .dir-option-right{
-		text-align: right;
-	}
+	body.rtl .hotel  .dir-option-right{		text-align: right;	}
 </style>

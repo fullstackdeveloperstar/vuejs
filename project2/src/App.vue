@@ -147,49 +147,25 @@ export default {
 .booking-app .row .col-xs-11,
 .booking-app .row .col-xs-12,{ flex-direction: column;}
 
-.booking-app .row .col-xs-12 {
-  width: 100%;
-}
-.booking-app .row .col-xs-11 {
-  width: 91.66666667%;
-}
-.booking-app .row .col-xs-10 {
-  width: 83.33333333%;
-}
-.booking-app .row .col-xs-9 {
-  width: 75%;
-}
-.booking-app .row .col-xs-8 {
-  width: 66.66666667%;
-}
-.booking-app .row .col-xs-7 {
-  width: 58.33333333%;
-}
-.booking-app .row .col-xs-6 {
-  width: 50%;
-}
-.booking-app .row .col-xs-5 {
-  width: 41.66666667%;
-}
-.booking-app .row .col-xs-4 {
-  width: 33.33333333%;
-}
-.booking-app .row .col-xs-3 {
-  width: 25%;
-}
-.booking-app .row .col-xs-2 {
-  width: 16.66666667%;
-}
-.booking-app .row .col-xs-1 {
-  width: 8.33333333%;
-}
+.booking-app .row .col-xs-12 { width: 100%;}
+
+.booking-app .row .col-xs-11 { width: 91.66666667%;}
+
+.booking-app .row .col-xs-10 {  width: 83.33333333%;}
+
+.booking-app .row .col-xs-9 { width: 75%;}
+
+.booking-app .row .col-xs-8 {  width: 66.66666667%;}
+
+.booking-app .row .col-xs-7 { width: 58.33333333%;}
+.booking-app .row .col-xs-6 { width: 50%;}
+.booking-app .row .col-xs-5 { width: 41.66666667%;}
+.booking-app .row .col-xs-4 { width: 33.33333333%;}
+.booking-app .row .col-xs-3 { width: 25%;}
+.booking-app .row .col-xs-2 { width: 16.66666667%;}
+.booking-app .row .col-xs-1 { width: 8.33333333%;}
 
 body{margin: 0;}
 
-*, *:before, *:after {
-    padding: 0;
-    margin: 0;
-    outline: 0;
-    box-sizing: border-box;
-}
+*, *:before, *:after { padding: 0; margin: 0; outline: 0; box-sizing: border-box;}
 </style>

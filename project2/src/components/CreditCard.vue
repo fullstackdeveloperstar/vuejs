@@ -38,23 +38,11 @@
 </script>
 
 <style scoped>
-	.creditcard-view{
-		padding: 20px;
-		margin: 10px;
-		background: #ddd;
-	}
+	.creditcard-view{		padding: 20px;		margin: 10px;		background: #ddd;	}
 
-	.cardicon{
-		position: absolute;
-		width: 34px;
-		top: 0;
-		left: 10px;
-	}
+	.cardicon{		position: absolute;		width: 34px;		top: 0;		left: 10px;	}
 
-	body.ltr .cardicon{
-		right: 10px;
-    	left: auto;
-	}
+	body.ltr .cardicon{		right: 10px;    	left: auto;	}
 
 	.creditcard-view .card-input-div{position: relative;}
 

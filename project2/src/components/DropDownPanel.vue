@@ -43,26 +43,15 @@
 </script>
 	
 <style>
-	.dropdown{
-		margin-top: 20px;
-		border: solid 1px #888;
-	}
+	.dropdown{		margin-top: 20px;		border: solid 1px #888;	}
 
-	.dropdown-header{
-		padding: 10px;
-	}
+	.dropdown-header{		padding: 10px;	}
 
 	.dropdown-header p{margin: 0}
 
-	.dropdown-body{
-		padding: 10px;
-	}
+	.dropdown-body{		padding: 10px;	}
 
-	body.rtl .dir-option-right{
-		text-align: right;
-	}
+	body.rtl .dir-option-right{		text-align: right;	}
 
-	body.rtl .dir-option-left{
-		text-align: left;
-	}
+	body.rtl .dir-option-left{		text-align: left;	}
 </style>

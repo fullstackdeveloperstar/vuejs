@@ -262,94 +262,37 @@
 </script>
 
 <style scoped>
-	.viewdetail .image-view{
-		height: 300px;
-		position: relative;
-		margin: 0;
-		padding: 2px;
-	}
+	.viewdetail .image-view{		height: 300px;		position: relative;		margin: 0;		padding: 2px;	}
 
-	.viewdetail .image-view .image-count{
-		position: absolute;
-		top: 20px;
-		left: 30px;
-		z-index: 1;
-		background: #000;
-		border-radius: 2px;
-		color: #fff;
-		padding: 10px;
-		opacity: 0.8;
+	.viewdetail .image-view .image-count{		position: absolute;		top: 20px;		left: 30px;		z-index: 1;		background: #000;		border-radius: 2px;		color: #fff;		padding: 10px;		opacity: 0.8;	}
 
-	}
+	.viewdetail .hotel-img{		width: 100%;	}
 
-	.viewdetail .hotel-img{
-		width: 100%;
-	}
+	.viewdetail .image-gradient{		background: linear-gradient(#eee,white, #151514);		position: absolute;		top: 0;		left: 0;		width: 100%;		height: 100%;		opacity: 0.5;	}
 
-	.viewdetail .image-gradient{
-		background: linear-gradient(#eee,white, #151514);
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		opacity: 0.5;
-	}
+	.viewdetail .detail-view{		padding: 5px;	}
 
-	.viewdetail .detail-view{
-		padding: 5px;
-	}
+	.viewdetail .detail-view .row{		margin-left: 0;		margin-right: 0;	}
 
-	.viewdetail .detail-view .row{
-		margin-left: 0;
-		margin-right: 0;
-	}
+	.viewdetail .icon{		width: 15px;	}
 
-	.viewdetail .icon{
-		width: 15px;
-	}
+	.viewdetail .detail-action{		background: rgb(228, 235, 242);		padding: 10px 30px 30px 30px;	}
 
-	.viewdetail .detail-action{
-		background: rgb(228, 235, 242);
-		padding: 10px 30px 30px 30px;
-	}
+	.viewdetail .action-item{		margin-top: 20px;		border:solid 1px rgb(53, 143, 36);		background: white;		padding: 10px 5px;	}
 
-	.viewdetail .action-item{
-		margin-top: 20px;
-		border:solid 1px rgb(53, 143, 36);
-		background: white;
-		padding: 10px 5px;
-	}
+	.viewdetail .action-item .btn{		width: 100%;	}
 
-	.viewdetail .action-item .btn{
-		width: 100%;
-	}
+	.viewdetail hr{		border: solid 1px;	}
 
-	.viewdetail hr{
-		border: solid 1px;
-	}
+	.viewdetail .detail-dropdowns{		padding: 10px 20px;	}
 
-	.viewdetail .detail-dropdowns{
-		padding: 10px 20px;
-	}
+	.viewdetail li::after {	    content: "•";	    display: inline-block;	    right: 0;	}
 
-	.viewdetail li::after {
-	    content: "•";
-	    display: inline-block;
-	    right: 0;
-	}
+	.viewdetail li{		list-style: none;	}
 
-	.viewdetail li{
-		list-style: none;
-	}
+	.viewdetail select, .viewdetail select option{		direction: rtl;	}
 
-	.viewdetail select, .viewdetail select option{
-		direction: rtl;
-	}
-
-	body.rtl .viewdetail select, body.rtl .viewdetail select option{
-		direction: ltr;
-	}
+	body.rtl .viewdetail select, body.rtl .viewdetail select option{		direction: ltr;	}
 
 	.viewdetail .standard-panel p{margin: 0}
 
