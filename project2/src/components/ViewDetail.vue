@@ -1,5 +1,6 @@
 <template>
 	<div class="viewdetail">
+		<!--
 		<div class="row image-view">
 			<img src="../assets/hotel.jpg" class="hotel-img">
 			<div class="image-count">4/1
@@ -8,6 +9,8 @@
 
 			<div class="image-gradient"></div>
 		</div>
+		-->
+		<Slider></Slider>
 
 		<div class="detail-view">
 			<div class="row">
@@ -233,13 +236,14 @@
 
 <script>
 	import DropDownPanel from "./DropDownPanel.vue";
+	import Slider from "./Slider.vue";
 	import GoogleMap from "./GoogleMap";
 
 	export default{
 		name: 'ViewDetail',
 
 		components: {
-			DropDownPanel, GoogleMap
+			DropDownPanel, GoogleMap,Slider
 		},
 
 		data () {
