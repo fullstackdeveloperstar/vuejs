@@ -60,7 +60,7 @@
                             </div><!-- /.form-controls -->
                         </div><!-- /.form-row -->
                        
-                        <div class="form-cols row">
+                        <div class="form-cols flex">
                         	<div class="col-xs-1  text-muted"  style="line-height: 40px;">ליה</div>
                             <div class="form-col col-xs-5 ">
                                 <div class="form-row">
@@ -272,7 +272,7 @@
                     סה"כ לתשלום:
                     <strong><small>$</small><span id="checkoutTotal">1978</span></strong>
                 </p>
-                <input type="submit" value="בצע הזמנה" class="btn form-btn" style="color: white;" @click="gotoCreditCard">
+                <input type="submit" value="בצע הזמנה" class="btn form-btn" style="color: white;border:0;" @click="gotoCreditCard">
             </div><!-- /.form-actions -->
         </div><!-- /.form-section-total -->
         <!-- הערות חשובות-->
@@ -301,23 +301,23 @@
 <style scoped>
 
 
-.section-checkout .section-nav {   font-size: 10px; line-height: 0; padding: 11px 6px; background: linear-gradient(to bottom, #ecf1f7 0%, #fff 75%);}
+.section-checkout .section-nav {    font-size: 10px;    line-height: 0;    padding: 11px 6px;    background: linear-gradient(to bottom, #ecf1f7 0%, #fff 75%);}
 
-.section-checkout .section-nav ol { text-align: justify; counter-reset: step; position: relative;  padding: 0;  margin: 0; list-style: none outside none;}
+.section-checkout .section-nav ol {    text-align: justify;    counter-reset: step;    position: relative;    padding: 0;    margin: 0;    list-style: none outside none;}
 
-.section-checkout .section-nav ol:before { content: ''; height: 15px; display: block; position: absolute; top: 12px;  right: 0; left: 0; z-index: 1; background-color: #dae3ed; border-width: 7px 0;border-style: solid; border-color: #fff;}
+.section-checkout .section-nav ol:before {    content: '';    height: 15px;    display: block;    position: absolute;    top: 12px;    right: 0;    left: 0;    z-index: 1;    background-color: #dae3ed;    border-width: 7px 0;    border-style: solid;    border-color: #fff;}
 
 .section-checkout .checkout .section-nav li.step-current {color: #35993f;}
 
 .section-checkout .section-nav li:first-child {text-align: right;z-index: 3;}
 
-.section-checkout .section-nav li {counter-increment: step; color: #9aacc1; letter-spacing: -0.01em;display: inline-block;vertical-align: middle; position: relative; padding-bottom: 20px; z-index: 2;}
+.section-checkout .section-nav li {    counter-increment: step;    color: #9aacc1;    letter-spacing: -0.01em;    display: inline-block;    vertical-align: middle;    position: relative;    padding-bottom: 20px;    z-index: 2;}
 
-.section-checkout .section-nav li.step-done:before, .section-checkout .section-nav li.step-current:before {background-color: #35993f;}
+.section-checkout .section-nav li.step-done:before, .section-checkout .section-nav li.step-current:before {    background-color: #35993f;}
 
-.section-checkout .section-nav li:first-child:before { margin: 0 0 0 auto;}
+.section-checkout .section-nav li:first-child:before {    margin: 0 0 0 auto;}
 
-.section-checkout .section-nav li:before {content: counter(step); font-size: 25px; line-height: 27px; color: #fff; font-weight: 700; text-align: center; width: 39px; height: 39px;   display: block;    position: relative;    z-index: 1;    border: 5px solid #fff;    margin: auto;    background-color: #dae2ed;    box-shadow: inset 0 1px 0 rgba(0,0,0,.05);    border-radius: 50%;}
+.section-checkout .section-nav li:before {    content: counter(step);    font-size: 25px;    line-height: 27px;    color: #fff;    font-weight: 700;    text-align: center;    width: 39px;    height: 39px;    display: block;    position: relative;    z-index: 1;    border: 5px solid #fff;    margin: auto;    background-color: #dae2ed;    box-shadow: inset 0 1px 0 rgba(0,0,0,.05);    border-radius: 50%;}
 
 .section-checkout .section-nav li:first-child span {    right: 0;}
 	
@@ -333,7 +333,7 @@ body.ltr .section-checkout .section-nav li i{    right: -60px;    transform: rot
 
 .section-checkout .logo, [class^="ico-"], .slider-gallery .owl-prev:before, .slider-gallery .owl-next:before {    display: inline-block;    vertical-align: middle;    background-repeat: no-repeat;    background-position: 0 0;    background-size: 100% 100%;}
 
-.section-checkout .section-nav li.step-current:after {    width: 50px;    height: 0;    border-width: 3px 55px 2px 0;    border-style: solid;    border-color: transparent #35993f transparent transparent;    background-color: transparent;}
+.section-checkout .section-nav li.step-current:after {    width: 50px;    height: 0;    border-width: 3px 55px 2px 0;   border-style: solid;    border-color: transparent #35993f transparent transparent;    background-color: transparent;}
 
 body.ltr .section-checkout .section-nav li.step-current:after{    border-width: 3px 0px 2px 55px;    border-color: transparent transparent transparent #35993f;}
 
@@ -365,11 +365,9 @@ body.ltr .section-checkout .section-nav li:after {    left: 32px;    right: auto
 
 .section-checkout .section-body {    padding: 14px 10px 0;    background: linear-gradient(to bottom, #ecf1f7 0%, #fff 75%) no-repeat 0 0;    -webkit-background-size: 100% 80px;    background-size: 100% 80px;    text-align: right;}
 
-
-
 .section-checkout .form-checkout{	padding: 10px;}
-.section-checkout .form-checkout .form-section-body hr { height: 1px; border: 0; margin: 0 7px; background-color: #eaeae0; }
 
+.section-checkout .form-checkout .form-section-body hr { height: 1px; border: 0; margin: 0 7px; background-color: #eaeae0; }
 
 .form-checkout h2 { font-size: 18px; line-height: 20px; color: #2a3335; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 5px; }
 .form-checkout h2 i { margin: -1px 0 0 4px; }

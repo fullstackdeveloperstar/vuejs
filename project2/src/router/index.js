@@ -33,11 +33,6 @@ export default new Router({
       path: '/creditcard',
       name: 'CreditCard',
       component: CreditCard
-    },
-    {
-      path: '/slider',
-      name: 'Slider',
-      component: Slider
     }
   ]
 })

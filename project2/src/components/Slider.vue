@@ -100,47 +100,124 @@ body {font-family: Verdana, sans-serif;}
 img {vertical-align: middle; height: 100%;}
 
 /* Slideshow container */
-.slideshow-container {  max-width: 1000px;  position: relative;  margin: auto;  height: 300px;}
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  height: 300px;
+}
 
-.prev, .next {  cursor: pointer;  position: absolute;  top: 50%;  width: auto;  padding: 16px;  margin-top: -22px;  color: white;  font-weight: bold;  font-size: 18px; transition: 0.6s ease;  border-radius: 0 3px 3px 0;}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
 
 /* Position the "next button" to the right */
-.next {  right: 0;  border-radius: 3px 0 0 3px;}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
 
-.prev{  left: 0;}
+}
+
+.prev{
+  left: 0;
+}
 
 .rtl .next{right: auto;left: 0;}
 
 .rtl .prev {left: auto;right: 0;}
 
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {  background-color: rgba(0,0,0,0.8);}
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
 
 /* Caption text */
-.text {  color: #f2f2f2;  font-size: 15px;  padding: 8px 12px;  position: absolute;  bottom: 8px;  width: 100%;  text-align: center;}
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
 
 /* Number text (1/3 etc) */
-.numbertext {  color: #f2f2f2;  font-size: 12px;  padding: 8px 12px;  position: absolute;  top: 10px;  left: 10px;  background: black;  opacity: 0.7;  border-radius: 3px;}
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: black;
+  opacity: 0.7;
+  border-radius: 3px;
+}
 
 /* The dots/bullets/indicators */
-.dot {  height: 15px;  width: 15px;  margin: 0 2px;  background-color: #bbb;  border-radius: 50%;  display: inline-block;  transition: background-color 0.6s ease;}
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
 
-.active {  background-color: #717171;}
+.active {
+  background-color: #717171;
+}
 
 /* Fading animation */
-.fade {  -webkit-animation-name: fade;  -webkit-animation-duration: 2.5s;  animation-name: fade;  animation-duration: 2.5s;}
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 2.5s;
+  animation-name: fade;
+  animation-duration: 2.5s;
+}
 
-.left-to-right{ -webkit-animation-name: lefttoright;  -webkit-animation-duration: 2.5s;  animation-name: lefttoright;  animation-duration: 2.5s; }
+.left-to-right{
+ -webkit-animation-name: lefttoright;
+  -webkit-animation-duration: 2.5s;
+  animation-name: lefttoright;
+  animation-duration: 2.5s; 
+}
 
-@-webkit-keyframes fade {  from {opacity: .4; }   to {opacity: 1; }}
+@-webkit-keyframes fade {
+  from {opacity: .4; } 
+  to {opacity: 1; }
+}
 
-@keyframes fade {  from {opacity: .4;}   to {opacity: 1; }}
+@keyframes fade {
+  from {opacity: .4;} 
+  to {opacity: 1; }
+}
 
-@-webkit-keyframes lefttoright {  from { width: 0%;}   to {width:100%}}
+@-webkit-keyframes lefttoright {
+  from { width: 0%;} 
+  to {width:100%}
+}
 
-@keyframes lefttoright {  from { width: 0%;}   to { width: 100%;}}
+@keyframes lefttoright {
+  from { width: 0%;} 
+  to { width: 100%;}
+}
 
 /* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {  .text {font-size: 11px}}
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
 </style>
 

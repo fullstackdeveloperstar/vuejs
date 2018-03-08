@@ -1,6 +1,6 @@
 <template>
 	<div class="hotel" @click="viewDetail">
-		<div class="row">
+		<div class="flex">
 			<div class="col-xs-8 detail-info">
 				<p class="text-right dir-option-left">Ramada Apollo Amsterdam Center</p>
 				<p class="text-right dir-option-left"><span>asda</span>
@@ -21,14 +21,14 @@
 			</div>
 		</div>
 
-		<div class="row more-info">
+		<div class="flex more-info">
 			<div class="col-xs-6 text-left dir-option-right">
 				<p class="text-muted">aadfa</p>
 				<p class="price">$2180</p>
 			</div>
 			<div class="col-xs-6">
 				<p class="info text-right dir-option-left">adskfjal4
-					<i class="glyphicon glyphicon-info-sign"></i>
+					<i class="fas fa-info-circle"></i>
 				</p>
 			</div>
 		</div>
@@ -48,17 +48,19 @@
 </script>
 
 <style scoped>
-	.hotel{		border: solid 1px #eee;		padding: 10px;		margin-top: 10px;	}
+	.hotel{border: solid 1px #eee;		padding: 10px;		margin-top: 10px;	}
 
-	.hotel .detail-info{		padding: 0 10px;	}
+	.hotel .detail-info{padding: 0 10px;}
 
 	.hotel .detail-info p{margin: 0}
 
-	.hotel-img{		width: 100%;	}
+	.ltr .hotel .detail-info{text-align: right;}
 
-	.hotel .icon{		width: 15px;	}
+	.hotel-img{width: 100px;	}
 
-	.hotel .more-info{		border-top: solid 1px #eee;		margin: 0 -9px;		padding: 5px;	}
+	.hotel .icon{width: 15px;}
+
+	.hotel .more-info{border-top: solid 1px #eee;		margin: 0 -9px;		padding: 5px;justify-content: space-between;align-items: center;}
 
 	.hotel .more-info .price{		font-weight: 700;	}
 

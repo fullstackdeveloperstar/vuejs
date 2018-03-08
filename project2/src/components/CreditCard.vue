@@ -1,33 +1,19 @@
 <template>
 	<div class="creditcard-view">
-		<div class="row">
-			<div class="col-xs-12 card-input-div">
-				<input class="form-control" placeholder="adkjfla">
-				<img src="../assets/cardicon.png" class="cardicon">
-			</div>
+		<div class="flex card-input-div">
+			<input class="" placeholder="adkjfla">
+			<span class="card-icon"><i class="fas fa-id-card"></i></span>
 		</div>
 
-		<div class="row margin-t-10">
-			<div class="col-xs-12 card-input-div">
-				<input class="form-control" placeholder="adkjfla">
-				<img src="../assets/cardicon.png" class="cardicon">
-			</div>
+		<div class="flex card-input-div">
+			<input class="" placeholder="adkjfla">
+			<span class="card-icon"><i class="fas fa-id-card"></i></span>
 		</div>
 
-		<div class="row margin-t-10">
-			<div class="col-xs-12 card-input-div">
-				<input class="form-control" placeholder="adkjfla">
-				<img src="../assets/cardicon.png" class="cardicon">
-			</div>
+		<div class="flex card-input-div">
+			<input class="" placeholder="adkjfla">
+			<span class="card-icon"><i class="fas fa-id-card"></i></span>
 		</div>
-
-		<div class="row margin-t-20">
-			<div class="col-xs-12 card-input-div">
-				<input class="form-control btn btn-success" type="button" value="adjfla">
-				
-			</div>
-		</div>
-
 	</div>
 </template>
 
@@ -38,15 +24,15 @@
 </script>
 
 <style scoped>
-	.creditcard-view{		padding: 20px;		margin: 10px;		background: #ddd;	}
+	.creditcard-view{padding: 20px;margin: 10px;background: #ddd;}
 
-	.cardicon{		position: absolute;		width: 34px;		top: 0;		left: 10px;	}
+	.creditcard-view .card-input-div{justify-content: space-between; align-items: center;position: relative;margin-bottom: 10px;}
 
-	body.ltr .cardicon{		right: 10px;    	left: auto;	}
+	.creditcard-view .card-input-div input{width: 100%; height: 50px;border: solid 1px #ddd; padding: 0 10px;}
+	
+	.creditcard-view .card-input-div .card-icon{position: absolute;    height: 50px; padding: 5px; font-size: 35px; color: #888;}
 
-	.creditcard-view .card-input-div{position: relative;}
+	.ltr .creditcard-view .card-input-div .card-icon{right: 0; left: auto;}
 
-	.creditcard-view .margin-t-10{margin-top: 10px;}
-
-	.creditcard-view .margin-t-20 {margin-top: 20px;}
+	.rtl .creditcard-view .card-input-div .card-icon{right: auto; left: 0;}
 </style>

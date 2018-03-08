@@ -1,19 +1,16 @@
 <template>
 	<div class="dropdown">
-		<div class="dropdown-header" @click="clickHeader">
-			<div class="row">
-				<div class="col-xs-3 text-left dir-option-right">
-					<i class="glyphicon glyphicon-chevron-up" v-show="isShow"></i>
-					<i class="glyphicon glyphicon-chevron-down" v-show="!isShow"></i>
-				</div>
-
-				<div class="col-xs-9 text-right dir-option-left">
-					<slot name="header">
-		              default header
-		            </slot>		
-				</div>
+		<div class="dropdown-header flex" @click="clickHeader">
+			<div class="">
+				<slot name="header">
+					default header
+				</slot>		
 			</div>
-			
+
+			<div class="">
+				<span v-show="isShow"><i class="fas fa-chevron-up"></i></span>
+				<span v-show="!isShow"><i class="fas fa-chevron-down"></i></span>
+			</div>
 		</div>
 
 		<div class="dropdown-body" v-show="isShow">
@@ -43,9 +40,9 @@
 </script>
 	
 <style>
-	.dropdown{		margin-top: 20px;		border: solid 1px #888;	}
+	.dropdown{margin-top: 20px;		border: solid 1px #888;	}
 
-	.dropdown-header{		padding: 10px;	}
+	.dropdown-header{padding: 10px; justify-content: space-between; align-items: center;}
 
 	.dropdown-header p{margin: 0}
 
