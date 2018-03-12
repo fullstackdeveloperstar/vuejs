@@ -96,9 +96,9 @@
 					        <div class="modal-body">
 					            <div class="form-options">
 					                <div class="person-rooms">
-					                    <form class="hotel-persons-room" data-room="1" v-for="room in rooms">
+					                    <form class="hotel-persons-room" data-room="1" v-for="(room, index) in rooms">
 					                        <div class="room-head">
-					                            <h4 class="text-center">Room <span class="room-number-place">1</span></h4>
+					                            <h4 class="text-center">Room <span class="room-number-place">{{index+1}}</span></h4>
 					                        </div>
 					                        <div class="form-body form-container">
 					                            <div class="form-section">
@@ -1263,6 +1263,8 @@ input:-webkit-autofill { -webkit-text-fill-color: inherit; -webkit-box-shadow: 0
 
 #hotelPersons .room-head {
   position: relative;
+  display: flex;
+  padding: 0 10px;
 }
 #hotelPersons .room-head .ico-cross {
   position: absolute;
@@ -1275,11 +1277,13 @@ input:-webkit-autofill { -webkit-text-fill-color: inherit; -webkit-box-shadow: 0
 
 
 .rtl {
-    direction: ltr;
+    direction: rtl;
 }
 
 
-
+.ltr{
+	direction: ltr;
+}
 
 /* Datepicker */
 .ui-datepicker-rtl {
