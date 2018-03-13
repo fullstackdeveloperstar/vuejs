@@ -2,38 +2,54 @@
   .datepicker__wrapper(v-if='show' v-on-click-outside="hideDatepicker")
     .datepicker__close-button.-hide-on-desktop(v-if='isOpen' @click='hideDatepicker') ＋
     .datepicker__dummy-wrapper( @click='isOpen = !isOpen' :class="`${isOpen ? 'datepicker__dummy-wrapper--is-active' : ''}` ")
-      input.datepicker__dummy-input.datepicker__input(
-        data-qa='datepickerInput'
-        :class="`${isOpen && checkIn == null ? 'datepicker__dummy-input--is-active' : ''} ${singleDaySelection ? 'datepicker__dummy-input--single-date' : ''}`"
-        :value="`${checkIn ? formatDate(checkIn) : ''}`"
-        :placeholder="i18n['check-in']"
-        type="text"
-        readonly
-      )
-      input.datepicker__dummy-input.datepicker__input(
-        v-if='!singleDaySelection'
-        :class="`${isOpen && checkOut == null && checkIn !== null ? 'datepicker__dummy-input--is-active' : ''}`"
-        :value="`${checkOut ? formatDate(checkOut) : ''}`"
-        :placeholder="i18n['check-out']"
-        type="text"
-        readonly
-      )
-    button.datepicker__clear-button(type='button' @click='clearSelection') ＋
+      .datapicker-input-div
+        span.calendar-icon
+          i.far.fa-calendar-alt
+        input.datepicker__dummy-input.datepicker__input.white-input(
+          data-qa='datepickerInput'
+          :class="`${isOpen && checkIn == null ? 'datepicker__dummy-input--is-active' : ''} ${singleDaySelection ? 'datepicker__dummy-input--single-date' : ''}`"
+          :value="`${checkIn ? formatDate(checkIn) : ''}`"
+          :placeholder="i18n['check-in']"
+          type="text"
+          readonly
+        )
+        
+      span.arrow-icon
+        i.fas.fa-arrow-right
+
+      .datapicker-input-div
+        span.calendar-icon
+          i.far.fa-calendar-alt
+        input.datepicker__dummy-input.datepicker__input.white-input(
+          v-if='!singleDaySelection'
+          :class="`${isOpen && checkOut == null && checkIn !== null ? 'datepicker__dummy-input--is-active' : ''}`"
+          :value="`${checkOut ? formatDate(checkOut) : ''}`"
+          :placeholder="i18n['check-out']"
+          type="text"
+          readonly
+        )
+    //- button.datepicker__clear-button(type='button' @click='clearSelection') ＋
     .datepicker( :class='`${ !isOpen ? "datepicker--closed" : "datepicker--open" }`')
       .-hide-on-desktop
+
+        .datapicker-open-topbar
+          img.logo-image(
+           src="../assets/logo.png"
+           v-if='screenSize !== "desktop" && isOpen'
+          )
         .datepicker__dummy-wrapper.datepicker__dummy-wrapper--no-border(
           @click='isOpen = !isOpen' :class="`${isOpen ? 'datepicker__dummy-wrapper--is-active' : ''}`"
           v-if='isOpen'
         )
           input.datepicker__dummy-input.datepicker__input(
-            :class="`${isOpen && checkIn == null ? 'datepicker__dummy-input--is-active' : ''}`"
+            :class="`${isOpen && checkOut == null ? 'datepicker__dummy-input--is-active' : ''}`"
             :value="`${checkIn ? formatDate(checkIn) : ''}`"
             :placeholder="i18n['check-in']"
             type="text"
             readonly
           )
           input.datepicker__dummy-input.datepicker__input(
-            :class="`${isOpen && checkOut == null && checkIn !== null ? 'datepicker__dummy-input--is-active' : ''}`"
+            :class="`${isOpen && checkOut != null ? 'datepicker__dummy-input--is-active' : ''}`"
             :value="`${checkOut ? formatDate(checkOut) : ''}`"
             :placeholder="i18n['check-out']"
             type="text"
@@ -94,6 +110,17 @@
                   :checkIn='checkIn'
                   :checkOut='checkOut'
                 )
+
+        .datepicker-bottom-div(
+          @click="hideDatepicker"
+          v-if='screenSize !== "desktop" && isOpen'
+        )
+          .datepicker-duration(v-if="duration > 0 && checkOut !== null")
+            | {{duration}}
+
+          .datepicker-bottom-content
+            | Close
+          
 </template>
 
 <script>
@@ -208,6 +235,8 @@ export default {
       yUp: null,
       sortedDisabledDates: null,
       screenSize: this.handleWindowResize(),
+      // isreRender: false,
+      duration: 0
     };
   },
 
@@ -234,10 +263,13 @@ export default {
         this.nextDisabledDate = null;
         this.show = true;
         this.parseDisabledDates();
-        this.reRender()
-        this.isOpen = false;
+        this.reRender();
+        //this.isOpen = false;
       }
-
+      console.log(this.checkIn)
+      console.log(this.checkOut)
+      var oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
+      this.duration = Math.round(Math.abs((this.checkOut - this.checkIn)/(oneDay))) + 1
       this.$emit("checkOutChanged", newDate )
     },
 
@@ -291,7 +323,7 @@ export default {
       this.show = false
       this.$nextTick(() => {
         this.show = true;
-      })
+      }) 
     },
 
     clearSelection(){
@@ -320,6 +352,7 @@ export default {
       }
       else if ( this.checkIn !== null && this.checkOut == null ) {
         this.checkOut = event.date;
+         
       }
       else {
         this.checkOut = null;
@@ -327,6 +360,7 @@ export default {
       }
 
       this.nextDisabledDate = event.nextDisabledDate
+      console.log('--------------');
     },
 
     renderPreviousMonth() {
@@ -513,7 +547,7 @@ $font-small: 14px;
     display: inline-block;
     width: 100%;
     height: 48px;
-    background: $white url('calendar_icon.regular.svg') no-repeat 17px center / 16px;
+    // background: $white url('calendar_icon.regular.svg') no-repeat 17px center / 16px;
   }
 
   &__input {
@@ -540,20 +574,45 @@ $font-small: 14px;
   }
 
   &__dummy-wrapper {
-    border: solid 1px $light-gray;
+    // border: solid 1px $light-gray;
     cursor: pointer;
     display: block;
     float: left;
     width: 100%;
     height: 100%;
+    display: flex;
+    justify-content: space-between;
 
     &--no-border.datepicker__dummy-wrapper {
-      margin-top: 15px;
+      // margin-top: 15px;
+      margin-top: 0px;
       border: 0;
+
     }
 
     &--is-active {
       border: 1px solid $primary-color;
+    }
+
+    .arrow-icon{
+      color: #888;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 7px;
+    }
+
+    .datapicker-input-div{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 50%;
+
+      .calendar-icon{
+        position: absolute;
+        padding: 8px;
+        color: #888;
+      }
     }
   }
 
@@ -561,25 +620,31 @@ $font-small: 14px;
     color: $primary-text-color;
     padding-top: 0;
     font-size: $font-small;
-    float: left;
+    // float: left;
     height: 48px;
     line-height: 3.1;
-    text-align: left;
+    // text-align: left;
     text-indent: 5px;
-    width: calc(50% + 4px);
+    // width: calc(50% - 10px);
+    width: 100%;
+    // background: #fff;
+    background: #ddd;
+    color: white;
 
     @include device($phone) {
       text-indent: 0;
-      text-align: center;
+      // text-align: center;
     }
 
     &:first-child {
-      background: transparent url('ic-arrow-right-datepicker.regular.svg') no-repeat right center / 8px;
-      width: calc(50% - 4px);
-      text-indent: 20px;
+      // background: transparent url('ic-arrow-right-datepicker.regular.svg') no-repeat right center / 8px;
+      // width: calc(50% - 10px);
+      width: 100%;
+      // text-indent: 20px;
+      // background: #fff;
     }
 
-    &--is-active { color: $primary-color; }
+    &--is-active { color: #fff; background:#178823!important}
     &--is-active::placeholder { color: $primary-color; }
     &--is-active::-moz-placeholder { color: $primary-color; }
     &--is-active:-ms-input-placeholder { color: $primary-color; }
@@ -599,6 +664,9 @@ $font-small: 14px;
     border: 0;
     height: 40px;
     padding-top: 15px;
+    margin-top: 3px;
+    width: 33px;
+    margin: 5px auto;
 
     &--invalid-range {
       background-color: rgba($primary-color, .3);
@@ -629,8 +697,11 @@ $font-small: 14px;
     }
 
     &--selected {
-      background-color: rgba($primary-color, .5);
+      // background-color: rgba($primary-color, .5);
+      background-color: rgb(23, 136, 35);
       color: $white;
+      border-radius: 50%;
+      
 
       &:hover {
         background-color: $white;
@@ -648,8 +719,22 @@ $font-small: 14px;
 
     &--first-day-selected,
     &--last-day-selected {
-      background: $primary-color;
+      // background: $primary-color;
       color: $white;
+      
+    }
+
+    &--first-day-selected{
+      background: url('../assets/last-date.png');
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      
+    }
+
+    &--last-day-selected{
+      background: url('../assets/first-date.png');
+     background-size: 100% 100%;
+      background-repeat: no-repeat;
     }
 
     &--allowed-checkout {
@@ -696,14 +781,37 @@ $font-small: 14px;
     padding: 20px;
     float: left;
 
-    @include device($up-to-tablet) { padding: 0; }
+    @include device($up-to-tablet) { padding: 0; 
+      .datepicker-bottom-div{
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 70px;
+          background: #178823;
+          color: white;
+          display:flex;
+          justify-content: center;
+          align-items: center;
+          .datepicker-bottom-content{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+          }
+
+          .datepicker-duration{
+            margin: 0 10px;
+          }
+      }
+    }
   }
 
   &__months {
     @include device($desktop) { width: 650px; }
 
     @include device($up-to-tablet) {
-      margin-top: 92px;
+      // margin-top: 92px;
+      margin-top: 150px;
       height: calc(100% - 92px);
       position: absolute;
       left: 0;
@@ -787,7 +895,8 @@ $font-small: 14px;
       box-shadow: 0 13px 18px -8px rgba($black, .07);
       height: 25px;
       left: 0;
-      top: 65px;
+      // top: 65px;
+      top: 115px;
       position: absolute;
       width: 100%;
     }
@@ -881,6 +990,24 @@ $font-small: 14px;
   @include device($desktop) {
     display: none;
   }
+}
+
+.rtl .arrow-icon{
+  transform: rotate(180deg);
+  margin: 0 7px;
+}
+
+.datapicker-open-topbar{
+  .logo-image{
+    height: 30px;
+    margin-top: 10px;
+    transition: 0s all;
+  }
+}
+
+.white-input{
+  background: white!important;
+  color: #888!important;
 }
 
 </style>
