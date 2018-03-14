@@ -454,6 +454,11 @@ export default {
     this.onElementHeightChange(document.body, () => {
       this.emitHeighChangeEvent();
     });
+
+    for(var i = 0; i< 10; i++){
+      this.renderNextMonth();
+    }
+    
   },
 
   destroyed() {
